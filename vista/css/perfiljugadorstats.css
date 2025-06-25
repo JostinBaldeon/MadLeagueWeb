@@ -1,0 +1,639 @@
+
+
+/* Estilos generales para las cajas (box) */
+.box {
+    background-color: var(--tm-white, #fff);
+    border: 1px solid var(--tm-grey, #ddd);
+    margin-top: 10px;
+    padding: 20px;
+    
+}
+
+/* Estilo para la fila principal */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+/* Estilo para la columna large-8 */
+.large-12 {
+    flex: 0 0 100%; /* Ocupa el 100% del ancho disponible */
+}
+
+/* Estilo para las columnas dentro de large-8 */
+.large-12 .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilo para las columnas large-3 dentro de large-12 */
+.large-3 {
+    flex: 0 0 31.78%; /* Cada columna ocupa el 31.78% del ancho de large-12 */
+    margin-right: 10px; /* Espaciado entre las columnas */
+    margin-bottom: 10px; /* Espaciado entre las filas */
+    
+}
+
+/* Estilo para las cajas (box) dentro de large-3 */
+.large-3 .box {
+    background-color: var(--tm-white, #ffffff);
+    border: 1px solid var(--tm-grey, #ffffff);
+    padding: 20px;
+}
+
+.flex-item-right {
+    flex: 1 1 75%; /* Ajusta este valor según lo deseado */
+}
+
+/* Estilo para la imagen del trofeo */
+.erfolg_bild_box {
+    margin-right: 20px; /* Espacio entre la imagen y la tabla */
+}
+
+/* Estilo para la tabla */
+.erfolg_info_box {
+    flex: 1; /* Ocupa todo el espacio restante */
+}
+
+/* Estilos adicionales para la tabla */
+.erfolg_info_box table {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse; /* Colapso de bordes para una apariencia más limpia */
+}
+
+.erfolg_info_box td {
+    border: 1px solid #747474; /* Borde para las celdas de la tabla */
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: center; /* Alineación centrada del texto en las celdas */
+}
+
+.erfolg_info_box td.erfolg_table_saison {
+    font-weight: bold; /* Estilo de fuente negrita para el año de temporada */
+}
+
+.erfolg_info_box td.erfolg_table_wappen img {
+    max-width: 808px; /* Tamaño máximo para los escudos (opcional) */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.content-box-headline {
+    background-color: var(--tm-admiral, #000000);
+    color: var(--tm-white, #fff);
+    display: block;
+    font-family: var(--tm-secondary-font, 'Oswald-VF', 'Oswald-fallback', sans-serif);
+    font-size: var(--tm-secondary-font-size-base, 1rem);
+    font-variation-settings: var(--tm-secondary-font-regular);
+    font-weight: initial;
+    line-height: 1.625rem;
+    margin: 0;
+    padding: 0 .5rem;
+    scroll-margin-top: 5rem;
+    text-transform: uppercase
+}
+
+.content-box-headline a {
+    align-items: center;
+    color: inherit;
+    display: inline-flex
+}
+
+
+
+.content-box-headline--bottom-bordered {
+    border-bottom: 1px solid var(--tm-light-grey, #000000)
+}
+
+.content-box-headline--extra-space {
+    padding: 5px
+}
+
+.content-box-headline--logo {
+    align-items: center;
+    display: flex
+}
+
+.content-box-headline--logo img {
+    margin-right: .5rem;
+    max-width: 23px
+}
+
+.responsive-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.grid-view .summary {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.grid-view .items {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grid-view .items th,
+.grid-view .items td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid-view .items th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.grid-view .items tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.grid-view .items img.bilderrahmen-fixed {
+    
+    width: 56px;
+    height: 72px;
+
+}
+
+
+
+.grid-view .items td.hauptlink a:hover {
+    text-decoration: underline;
+}
+
+.grid-view .items .zentriert {
+    text-align: center;
+}
+
+.grid-view .items .rechts {
+    text-align: right;
+}
+
+.grid-view .items .flaggenrahmen {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.grid-view .items .tiny_wappen {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.info-table__link:hover {
+    text-decoration: underline
+}
+
+.info-table__span--line-height {
+    line-height: 1.125rem
+}
+
+.info-table__span--specific {
+    line-height: 1rem
+}
+
+.info-table .flaggenrahmen {
+    margin-right: .1875rem
+}
+
+/*Encabezado perfil*/
+.data-header {
+    background-image: linear-gradient(to bottom, var(--tm-white, #fff) 0%, var(--tm-white, #fff) 100%);
+    border: .0625rem solid var(--tm-grey, #ddd);
+    display: grid;
+    grid-template: "name name" 3.125rem "image infobox" auto "image details" auto "marketvalue details" auto "triumphs triumphs" auto "watchlist watchlist" auto/7.125rem auto;
+    height: auto;
+    margin: .3125rem .3125rem 0;
+    padding: 0;
+    position: relative;
+    z-index: 9991
+}
+
+@media(min-width: 769px) {
+    .data-header {
+        background-image: linear-gradient(to bottom, var(--tm-white, #fff) 0%, var(--tm-grey, #ddd) 30%, var(--tm-grey, #ddd) 68.5%, var(--tm-white, #fff) 68.5%);
+        grid-template: "name name name name name void infobox infobox" 1fr "image void3 triumphs triumphs triumphs void infobox infobox" auto "image void3 triumphs triumphs triumphs void void2 void2" 1.25rem "image void3 triumphs triumphs triumphs void marketvalue marketvalue" 0.625rem "image void3 void4 void4 void4 void marketvalue marketvalue" 0.8125rem "image void3 void4 void4 void4 void marketvalue marketvalue" 0.75rem "image void3 details details details void marketvalue marketvalue" 4.25rem/8.9375rem 0.875rem auto;
+        height: 16.0625rem;
+        padding: .25rem .625rem .625rem;
+        z-index: 3
+    }
+}
+
+.data-header__verified-logo {
+    margin-left: .3125rem
+}
+
+.data-header__profile-image {
+    display: block
+}
+
+.data-header__headline-container {
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--tm-white, #b1aeae) 0%, var(--tm-grey, #ddd) 60%);
+    display: inline-flex;
+    font-size: 1.875rem;
+    grid-area: name;
+    margin: 0;
+    padding-left: .3125rem
+}
+
+@media(min-width: 769px) {
+    .data-header__headline-container {
+        background-image: unset;
+        display: flex;
+        padding-left: 0
+    }
+}
+
+.data-header__headline-wrapper {
+    color: var(--tm-dark-blue, #1a3151);
+    font-family: var(--tm-quaternary-font, 'OSL', 'OSL-fallback', sans-serif);
+    font-size: 1.875rem;
+    font-weight: normal;
+    margin: 0 0 0 .125rem
+}
+
+@media(min-width: 769px) {
+    .data-header__headline-wrapper {
+        font-size: 2.375rem
+    }
+}
+
+.data-header__headline-wrapper--oswald {
+    font-family: var(--tm-secondary-font, 'Oswald-VF', 'Oswald-fallback', sans-serif);
+    font-size: 1.4375rem;
+    font-variation-settings: "wght" 700
+}
+
+@media(min-width: 769px) {
+    .data-header__headline-wrapper--oswald {
+        font-size: 2.375rem
+    }
+}
+
+.data-header__btn-favorite {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    display: inline-flex
+}
+
+.data-header__badge-container {
+    align-items: flex-end;
+    border-top: .0625rem solid var(--tm-grey, #ddd);
+    display: inline-flex;
+    grid-area: triumphs;
+    justify-content: flex-start;
+    margin-top: .1875rem;
+    padding: .1875rem 0 .1875rem .3125rem
+}
+
+@media(min-width: 769px) {
+    .data-header__badge-container {
+        border-top: unset;
+        margin-top: 0;
+        min-height: 5rem;
+        padding: 0
+    }
+}
+
+.data-header__info-box {
+    align-items: center;
+    grid-area: details;
+    line-height: 1.1875rem;
+    margin: .125rem 0 0 .3125rem
+}
+
+@media(min-width: 769px) {
+    .data-header__info-box {
+        align-items: center;
+        display: inline-grid;
+        margin: 0
+    }
+}
+
+.data-header__info-box--as-big-box {
+    grid-area: auto
+}
+
+@media(min-width: 769px) {
+    .data-header__info-box--as-big-box {
+        grid-area: inherit
+    }
+}
+
+.data-header__shirt-number {
+    font-weight: bold
+}
+
+.data-header__details {
+    align-self: center;
+    display: flex;
+    flex-direction: column
+}
+
+@media(min-width: 769px) {
+    .data-header__details {
+        display: grid;
+        grid-gap: 0 .625rem;
+        grid-template-columns: repeat(3, auto)
+    }
+}
+
+.data-header__items {
+    display: flex;
+    flex-direction: column;
+    margin: 0
+}
+
+.data-header__label {
+    align-self: flex-start;
+    color: var(--tm-dark-grey, #333);
+    display: block
+}
+
+.data-header__content {
+    color: var(--tm-dark-grey, #333);
+    font-weight: bold
+}
+
+.data-header__content--vertical-aligned {
+    align-items: center;
+    display: inline-flex
+}
+
+.data-header__content--tiny-logo {
+    margin: 0 2px;
+    vertical-align: text-bottom
+}
+
+.data-header__content .flagge,
+.data-header__content .flaggenrahmen {
+    margin: 0 .125rem
+}
+
+.data-header__content--highlight {
+    color: var(--tm-light-blue, #1d75a3)
+}
+
+.data-header__content--thin {
+    font-weight: normal
+}
+
+.data-header__profile-container {
+    align-items: flex-start;
+    background: var(--tm-white, #fff);
+    display: inline-flex;
+    grid-area: image;
+    justify-content: center;
+    margin: .1875rem .1875rem 0;
+    position: relative;
+    width: 6.875rem
+}
+
+@media(min-width: 769px) {
+    .data-header__profile-container {
+        align-items: flex-end;
+        margin: 0;
+        width: auto
+    }
+}
+
+.data-header__profile-container--national-team {
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.data-header__profile-container--national-team>img {
+    border: .1875rem solid var(--tm-lightest-grey, #f2f2f2);
+    border-radius: 100%
+}
+
+.data-header__box__flag {
+    border: .0625rem solid var(--tm-foggy-sky, #d2e3ed);
+    border-radius: 50%
+}
+
+
+.data-header__box--big {
+    align-items: center;
+    background-color: var(--tm-white, #fff);
+    border: 0;
+    border-bottom: .0625rem solid var(--tm-grey, #ddd);
+    display: inline-flex;
+    grid-area: infobox;
+    justify-self: start;
+    margin: .3125rem 0 .3125rem .3125rem;
+    max-height: 7.5rem;
+    padding: 0 0 .3125rem;
+    width: calc(100% - .625rem)
+}
+
+.data-header__box--big a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: black; /* Cambia el color a negro */
+}
+
+.data-header__box--big a:hover {
+    text-decoration: none; /* Asegura que al pasar el ratón tampoco se subraye */
+    color: black; /* Mantiene el color negro al pasar el ratón */
+}
+
+
+@media(min-width: 769px) {
+    .data-header__box--big {
+        border: .0625rem solid var(--tm-grey, #ddd);
+        justify-self: end;
+        margin: .625rem 0 0;
+        padding: .625rem .9375rem .625rem .625rem;
+        width: unset
+    }
+}
+
+/* Tamaños más pequeños: dos columnas en tablets y móviles grandes */
+@media (max-width: 768px) {
+    .large-3 {
+        flex: 0 0 31.78%; /* Dos columnas */
+        margin: 4px;
+    }
+}
+
+/* Tamaños muy pequeños: una columna en móviles */
+@media (max-width: 480px) {
+    .large-3 {
+        flex: 0 0 50%; /* Una columna */
+        margin: 40px 0;
+    }
+
+    .box {
+        padding: 10px; /* Reduce el padding */
+    }
+
+    .content-box-headline {
+        font-size: 0.875rem; /* Tamaño más pequeño para títulos */
+    }
+
+    .erfolg_info_box td {
+        font-size: 0.8rem; /* Reduce el tamaño de la fuente */
+    }
+}
+
+nombre_Club{
+    text-decoration: none;
+}
+
+
+
+
+
+.news-archiv__header {
+    margin-bottom: 20px;
+    
+}
+
+.direct-headline__header-box {
+    background-color: #000000;
+    padding: 10px;
+
+    text-align: center;
+    display: flex; /* Alinea los elementos dentro del header */
+    justify-content: space-between; /* Coloca el botón a la derecha */
+    align-items: center; /* Centra verticalmente el texto y el botón */
+}
+
+.direct-headline__header {
+    margin: 0;
+    color: #ffffff;
+}
+
+.toggle-content {
+    display: block; /* Mostrar por defecto */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 500px; /* Ajusta según la altura máxima estimada del contenido */
+}
+
+.toggle-content.hidden {
+    max-height: 0;
+    display: none; /* Opcional, para ocultar completamente */
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto; /* Alinea el botón al extremo derecho */
+    color: var(--tm-white, #fff);
+}
+
+.toggle-button[aria-expanded="true"]::after {
+    content: "▲"; /* Icono de cerrar */
+}
+
+.toggle-button[aria-expanded="false"]::after {
+    content: "▼"; /* Icono de abrir */
+}
+
+.caraacara-table {
+    width: 40%; /* Reduce el ancho para que ocupe menos espacio */
+    margin: 20px auto; /* Centra la tabla horizontalmente */
+    border-collapse: collapse; /* Une los bordes de las celdas */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    text-align: center; /* Centra todo el contenido */
+    color: var(--tm-white, #fff);
+    
+    
+}
+
+.caraacara-table td {
+    border: 1px solid #d1d1d1; /* Borde ligero */
+    padding: 10px; /* Reduce el relleno para compactar las celdas */
+    color: var(--tm-white, #000000);
+}
+
+.caraacara-table th {
+    background-color: #000000; /* Fondo para los encabezados */
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Mayúsculas */
+    border: 1px solid #000000; /* Borde ligero */
+    padding: 8px; /* Reduce el relleno para compactar las celdas */
+}
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen dentro del modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+
+    border-radius: 8px;
+    animation: fadeIn 0.3s;
+}
+
+/* Animación para la apertura */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Botón cerrar */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+}
+
+/* Deshabilitar botón de cerrar menú */
+.close-menu.disabled {
+    pointer-events: none;
+    opacity: 0.5; /* Opcional: apariencia deshabilitada */
+    cursor: not-allowed;
+}
+
+.Leyenda-caraacara {
+    text-align: center; /* Centra el texto */
+    font-size: 16px; /* Tamaño de la fuente para mayor legibilidad */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin: 10px auto; /* Centra el párrafo y agrega un margen superior e inferior */
+    max-width: 94%;
+}
+
+.Leyenda-caraacara strong {
+    margin-right: 10px; /* Espaciado entre los elementos fuertes */
+    font-weight: bold; /* Asegura que las etiquetas strong estén en negrita */
+}

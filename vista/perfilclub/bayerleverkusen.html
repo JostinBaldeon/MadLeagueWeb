@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayer Leverkusen</title>
+    <link rel="icon" type="image/png" href="../img/icologotorneo.png">
+    <link rel="stylesheet" href="../css/perfilclub.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <audio id="background-music" autoplay loop>
+
+    </audio>
+    <div class="container">
+        <header class="tm-header">
+            <div class="tm-header__box ">
+                <a href="../../Home.html">
+                    <img class="icon-logo" src="../img/logopagina.png" height="62"
+                        width="156" title="Transfermarkt" alt="Transfermarkt">
+                </a>
+                <tm-domainswitcher open-list="false" tld="es"></tm-domainswitcher>
+                <div class="tm-header__social-box">
+                    <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank"
+                        class="header__social-link" onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+                        <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20"
+                            height="20" class="header__icon">
+                    </a>
+                </div>
+                <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+                    <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="../buscadora.html"
+                        method="GET">
+                        <input type="text" name="query" class="tm-header__input--search-field"
+                            placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off"
+                            spellcheck="false" value="" />
+                        <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" href=".." />
+                    </form>
+                </div>
+            </div>
+        </header>
+        <nav class="main-navbar navihalter">
+            <ul class="main-navbar__container megamenu_dark_bar megamenu_dark" itemscope="itemscope"
+                itemtype="http://www.schema.org/SiteNavigationElement">
+                <li class="main-navbar__list" data-nav-group="news">
+                    <!-- Cambio aquí: Añadir un enlace a noticias.html -->
+                    <a href="Noticias.html">
+                        <span class="main-navbar__list-title tm-main-nav-el">Noticias</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <!-- Cambio aquí: Añadir un enlace a mercado.html -->
+                    <a href="mercado.html">
+                        <span class="main-navbar__list-title tm-main-nav-el"
+                            onClick="tmEvent('Marktwerte','click','menu');">
+                            Valores de mercado
+                        </span>
+                    </a>
+                    <div class="main-navbar__drop-down"></div>
+                </li>
+            </ul>
+        </nav>
+        <header class="data-header" itemscope itemtype="https://schema.org/Person">
+            <div class="data-header__ribbon">
+            </div>
+            <div class="data-header__headline-container">
+                <h1 class="data-header__headline-wrapper">
+                    <strong>Bayer Leverkusen</strong>
+                </h1>
+            </div>
+
+            <div class="data-header__box--big">
+                <a href="../listadeclubes.html" class="data-header__box__club-link">
+                    <img src="../img/logotorneo.jpg" alt="MadLeague" height="100" width="80" />
+                </a>
+                <div class="data-header__club-info">
+                    <span class="data-header__club" itemprop="affiliation">
+                        <a title="MadLeague" href="../listadeclubes.html">MadLeague</a>
+                    </span><br />
+
+                    <span class="data-header__label">Liga:
+                        <span class="data-header__content">
+                            Primera División
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="data-header__profile-container">
+                <div class="modal-trigger" data-custom-open="modal-1" id="fotoauswahlOeffnen" style="cursor:pointer"
+                    onclick="tmEvent('spielerprofil','click','profilbild');">
+                    <a href="../perfilclub/BayerLeverkusen.html"><img src="../img/logoclubes/bayerleverkusen.png"
+                            title="Bayer Leverkusen" alt="Bayer Leverkusen" class="bilderrahmen-fixed" height="180"
+                            width="140" /></a>
+                </div>
+            </div>
+            <div class="data-header__info-box ">
+                <div class="data-header__details">
+                    <ul class="data-header__items">
+                        <li class="data-header__label">Estadio:
+                            <span itemprop="birthDate" class="data-header__content">
+                                BayArena </span>
+                        </li>
+                        <li class="data-header__label">N° de jugadores:
+                            <span itemprop="birthDate" class="data-header__content" id="player-count">0</span>
+                        </li>
+                        <li class="data-header__label">Edad promedio:
+                            <span itemprop="birthDate" class="data-header__content" id="player-age">0</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!-- Valor total de los jugadores -->
+            <div class="data-header__box--small">
+                <a href="#" class="data-header__market-value-wrapper">0,00
+                    <span class="waehrung">mill. €</span>
+                </a>
+            </div>
+
+
+        </header>
+        <div class="row vereinsstartseite">
+            <div class="large-8 columns">
+                <div class="box">
+                    <h2 class="content-box-headline">
+                        Equipo
+                    </h2>
+
+
+                    <div class="responsive-table">
+                        <div id="yw1" class="grid-view">
+                            <div class="summary"></div>
+                            <table class="items">
+                                <thead>
+                                    <tr>
+                                        <th class="zentriert" id="yw1_c0"><a class="sort-link asc">#</a>
+                                        </th>
+                                        <th id="yw0_c0" class="zentriert">Foto</th>
+                                        <th class="zentriert" id="yw0_c0">Nombre</th>
+                                        <th class="zentriert" id="yw0_c1">Edad</th>
+                                        <th class="zentriert" id="yw0_c2">Nacionalidad</th>
+                                        <th class="rechts" id="yw0_c3" onclick="sortTable()">Valor de Mercado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+
+                                    <tr class="odd">
+                                        <!-- Lukas Hradecky -->
+                                        <td title="Portero" class="zentriert rueckennummer bg_Torwart">
+                                            <div class="rn_nummer">PT</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/LukasHradecky.webp"
+                                                    title="Lukas Hradecky" alt="Lukas Hradecky"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Lukas Hradecky" href="#">Lukas Hradecky</a></td>
+                                        <td class="zentriert">34</td>
+                                        <td class="zentriert"><img src="../img/banderas/Finlandia.png" title="Finlandia"
+                                                alt="Finlandia" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">2,50 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Odilon Kossounou -->
+                                        <td title="Defensa central" class="zentriert rueckennummer bg_Abwehr">
+                                            <div class="rn_nummer">DF</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/OdilonKossounou.webp"
+                                                    title="Odilon Kossounou" alt="Odilon Kossounou"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Odilon Kossounou" href="#">Odilon Kossounou</a>
+                                        </td>
+                                        <td class="zentriert">23</td>
+                                        <td class="zentriert"><img src="../img/banderas/CostaDeMarfil.png"
+                                                title="Costa de Marfil" alt="Costa de Marfil" class="flaggenrahmen" />
+                                        </td>
+                                        <td class="rechts hauptlink player-value">35,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Jonathan Tah -->
+                                        <td title="Defensa central" class="zentriert rueckennummer bg_Abwehr">
+                                            <div class="rn_nummer">DF</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/JonathanTah.webp"
+                                                    title="Jonathan Tah" alt="Jonathan Tah"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Jonathan Tah" href="#">Jonathan Tah</a></td>
+                                        <td class="zentriert">28</td>
+                                        <td class="zentriert"><img src="../img/banderas/Alemania.png" title="Alemania"
+                                                alt="Alemania" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">30,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Jeanuël Belocian -->
+                                        <td title="Defensa central" class="zentriert rueckennummer bg_Abwehr">
+                                            <div class="rn_nummer">DF</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/JeanuelBelocian.webp"
+                                                    title="Jeanuël Belocian" alt="Jeanuël Belocian"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Jeanuël Belocian" href="#">Jeanuël Belocian</a>
+                                        </td>
+                                        <td class="zentriert">19</td>
+                                        <td class="zentriert"><img src="../img/banderas/Francia.png" title="Francia"
+                                                alt="Francia" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">10,00 mill. €</td>
+                                    </tr>
+                                    
+                                    <tr class="odd">
+                                        <!-- Dayot Upamecano -->
+                                        <td title="Defensa central" class="zentriert rueckennummer bg_Abwehr">
+                                            <div class="rn_nummer">DF</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/DayotUpamecano.webp" title="Dayot Upamecano" alt="Dayot Upamecano" class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Dayot Upamecano" href="#">Dayot Upamecano</a></td>
+                                        <td class="zentriert">25</td>
+                                        <td class="zentriert"><img src="../img/banderas/Francia.png" title="Francia" alt="Francia" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">45,00 mill. €</td>
+                                    </tr>
+                                    
+                                    <tr class="odd">
+                                        <!-- Ibrahima Konaté -->
+                                        <td title="Defensa central" class="zentriert rueckennummer bg_Abwehr">
+                                            <div class="rn_nummer">DF</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/IbrahimaKonate.webp"
+                                                    title="Ibrahima Konaté" alt="Ibrahima Konaté"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="Ibrahima Konaté" href="#">Ibrahima Konaté</a>
+                                        </td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/Francia.png" title="Francia"
+                                                alt="Francia" class="flaggenrahmen" /><br />
+                                            <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">45,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Alejandro Grimaldo -->
+                                        <td title="Lateral izquierdo" class="zentriert rueckennummer bg_Abwehr">
+                                            <div class="rn_nummer">LI</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/AlejandroGrimaldo.webp"
+                                                    title="Alejandro Grimaldo" alt="Alejandro Grimaldo"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Alejandro Grimaldo" href="#">Alejandro
+                                                Grimaldo</a></td>
+                                        <td class="zentriert">28</td>
+                                        <td class="zentriert"><img src="../img/banderas/españa.png" title="españa"
+                                                alt="españa" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">45,00 mill. €</td>
+                                    </tr>
+                                
+                                    <tr class="odd">
+                                        <!-- Alessandro Florenzi -->
+                                        <td title="Lateral derecho" class="zentriert rueckennummer bg_Abwehr">
+                                            <div class="rn_nummer">LD</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/AlessandroFlorenzi.webp"
+                                                    title="Alessandro Florenzi" alt="Alessandro Florenzi"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="Alessandro Florenzi" href="#">Alessandro Florenzi</a></td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">33</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/Italia.png" title="Italia"
+                                                alt="Italia" class="flaggenrahmen" /><br />
+                                        <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">2,00 mill. €</td>
+                                    </tr>
+                                    
+                                    <tr class="odd">
+                                        <!-- Daniel Carvajal -->
+                                        <td title="Lateral derecho" class="zentriert rueckennummer bg_Abwehr">
+                                            <div class="rn_nummer">LD</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/DanielCarvajal.webp"
+                                                    title="Daniel Carvajal" alt="Daniel Carvajal"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="Daniel Carvajal" href="#">Daniel Carvajal</a>
+                                        </td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">32</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/España.png" title="España"
+                                                alt="España" class="flaggenrahmen" /><br />
+                                            <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">12,00 mill. €</td>
+                                    </tr>
+                                    
+                                    <tr class="odd">
+                                        <!-- Granit Xhaka -->
+                                        <td title="Pivote" class="zentriert rueckennummer bg_Mittelfeld">
+                                            <div class="rn_nummer">PV</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/GranitXhaka.webp"
+                                                    title="Granit Xhaka" alt="Granit Xhaka"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Granit Xhaka" href="#">Granit Xhaka</a></td>
+                                        <td class="zentriert">31</td>
+                                        <td class="zentriert"><img src="../img/banderas/Suiza.png" title="Suiza"
+                                                alt="Suiza" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">20,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Robert Andrich -->
+                                        <td title="Pivote" class="zentriert rueckennummer bg_Mittelfeld">
+                                            <div class="rn_nummer">PV</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/RobertAndrich.webp"
+                                                    title="Robert Andrich" alt="Robert Andrich"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Robert Andrich" href="#">Robert Andrich</a></td>
+                                        <td class="zentriert">29</td>
+                                        <td class="zentriert"><img src="../img/banderas/Alemania.png" title="Alemania"
+                                                alt="Alemania" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">17,00 mill. €</td>
+                                    </tr>
+                                                                        
+                                    <tr class="odd">
+                                        <!-- Leandro Paredes -->
+                                        <td title="Pivote" class="zentriert rueckennummer bg_Mittelfeld">
+                                            <div class="rn_nummer">PV</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/LeandroParedes.webp" title="Leandro Paredes" alt="Leandro Paredes" class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Leandro Paredes" href="#">Leandro Paredes</a></td>
+                                        <td class="zentriert">30</td>
+                                        <td class="zentriert"><img src="../img/banderas/Argentina.png" title="Argentina" alt="Argentina" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">8,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Exequiel Palacios -->
+                                        <td title="Mediocentro" class="zentriert rueckennummer bg_Mittelfeld">
+                                            <div class="rn_nummer">MC</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/ExequielPalacios.webp"
+                                                    title="Exequiel Palacios" alt="Exequiel Palacios"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Exequiel Palacios" href="#">Exequiel
+                                                Palacios</a></td>
+                                        <td class="zentriert">25</td>
+                                        <td class="zentriert"><img src="../img/banderas/Argentina.png" title="Argentina"
+                                                alt="Argentina" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">45,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Florian Wirtz -->
+                                        <td title="Mediocentro ofensivo" class="zentriert rueckennummer bg_Mittelfeld">
+                                            <div class="rn_nummer">MO</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/FlorianWirtz.webp"
+                                                    title="Florian Wirtz" alt="Florian Wirtz"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Florian Wirtz" href="#">Florian Wirtz</a></td>
+                                        <td class="zentriert">21</td>
+                                        <td class="zentriert"><img src="../img/banderas/Alemania.png" title="Alemania"
+                                                alt="Alemania" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">130,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- João Félix -->
+                                        <td title="Mediapunta" class="zentriert rueckennummer bg_Mittelfeld">
+                                            <div class="rn_nummer">MO</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/JoaoFelix.webp"
+                                                    title="João Félix" alt="João Félix"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="João Félix" href="#">João Félix</a></td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">24</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/Portugal.png" title="Portugal"
+                                                alt="Portugal" class="flaggenrahmen" /><br />
+                                            <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">30,00 mill. €</td>
+                                    </tr>
+                                                                        
+                                    <tr class="odd">
+                                        <!-- Mason Mount -->
+                                        <td title="Mediocentro ofensivo" class="zentriert rueckennummer bg_Mittelfeld">
+                                            <div class="rn_nummer">MO</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/MasonMount.webp"
+                                                    title="Mason Mount" alt="Mason Mount"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="Mason Mount" href="#">Mason Mount</a></td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/Inglaterra.png" title="Inglaterra"
+                                                alt="Inglaterra" class="flaggenrahmen" /><br />
+                                        <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">35,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Amine Adli -->
+                                        <td title="Extremo izquierdo" class="zentriert rueckennummer bg_Sturm">
+                                            <div class="rn_nummer">EI</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/AmineAdli.webp"
+                                                    title="Amine Adli" alt="Amine Adli"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Amine Adli" href="#">Amine Adli</a></td>
+                                        <td class="zentriert">24</td>
+                                        <td class="zentriert"><img src="../img/banderas/Marruecos.png" title="Marruecos"
+                                                alt="Marruecos" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">30,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Martin Terrier -->
+                                        <td title="Extremo izquierdo" class="zentriert rueckennummer bg_Sturm">
+                                            <div class="rn_nummer">EI</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/MartinTerrier.webp"
+                                                    title="Martin Terrier" alt="Martin Terrier"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Martin Terrier" href="#">Martin Terrier</a></td>
+                                        <td class="zentriert">27</td>
+                                        <td class="zentriert"><img src="../img/banderas/Francia.png" title="Francia"
+                                                alt="Francia" class="flaggenrahmen" /></td>
+                                        <td class="rechts hauptlink player-value">20,00 mill. €</td>
+                                    </tr>
+                                                                        
+                                    <tr class="odd">
+                                        <!-- Khvicha Kvaratskhelia -->
+                                        <td title="Extremo izquierdo" class="zentriert rueckennummer bg_Sturm">
+                                            <div class="rn_nummer">EI</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/KhvichaKvaratskhelia.webp"
+                                                    title="Khvicha Kvaratskhelia" alt="Khvicha Kvaratskhelia"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="Khvicha Kvaratskhelia" href="#">Khvicha Kvaratskhelia</a></td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">23</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/Georgia.png" title="Georgia"
+                                                alt="Georgia" class="flaggenrahmen" /><br />
+                                        <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">80,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Patrik Schick -->
+                                        <td title="Delantero centro" class="zentriert rueckennummer bg_Sturm">
+                                            <div class="rn_nummer">DC</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/PatrikSchick.webp"
+                                                    title="Patrik Schick" alt="Patrik Schick"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Patrik Schick" href="#">Patrik Schick</a></td>
+                                        <td class="zentriert">28</td>
+                                        <td class="zentriert"><img src="../img/banderas/RepublicaCheca.png"
+                                                title="Republica Checa" alt="Republica Checa" class="flaggenrahmen" />
+                                        </td>
+                                        <td class="rechts hauptlink player-value">22,00 mill. €</td>
+                                    </tr>
+                                    
+                                    <tr class="odd">
+                                        <td title="Delantero centro" class="zentriert rueckennummer bg_Sturm">
+                                            <div class="rn_nummer">DC</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/RomeluLukaku.webp"
+                                                    title="Romelu Lukaku" alt="Romelu Lukaku"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Romelu Lukaku" href="#">Romelu Lukaku</a></td>
+                                        <td class="zentriert">31</td>
+                                        <td class="zentriert"><img src="../img/banderas/Belgica.png" title="Belgica"
+                                                alt="Belgica" class="flaggenrahmen" /><br />
+                                        <td class="rechts hauptlink player-value">30,00 mill. €</td>
+                                    </tr>
+                                    
+                                    <tr class="odd">
+                                        <!-- Arkadiusz Milik -->
+                                        <td title="Delantero centro" class="zentriert rueckennummer bg_Sturm">
+                                            <div class="rn_nummer">DC</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/ArkadiuszMilik.webp"
+                                                    title="Arkadiusz Milik" alt="Arkadiusz Milik"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="Arkadiusz Milik" href="#">Arkadiusz Milik</a>
+                                        </td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">30</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/Polonia.png" title="Polonia"
+                                                alt="Polonia" class="flaggenrahmen" /><br />
+                                            <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">6,00 mill. €</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="keys" style="display:none" title="/real-madrid/startseite/verein/418">
+                                <span>1</span><span>13</span><span>25</span><span>3</span><span>22</span><span>4</span><span>6</span><span>23</span><span>20</span><span>2</span><span>17</span><span>18</span><span>15</span><span>12</span><span>8</span><span>10</span><span>19</span><span>5</span><span>21</span><span>24</span><span>32</span><span>7</span><span>11</span><span>14</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--DT-->
+            <div class="large-4 columns">
+                <div class="tm-staff-slider box svelte-x3ncab">
+                    <div class="content-box-headline">Director técnico</div>
+                    <div class="flex-container svelte-1fcs8xq">
+                        <div class="flex-item-left" style="flex-basis: 24%;">
+                            <div class="image">
+                                <a href="../perfildt/Ivo.html" title="Ivo" class="profile-link" target="">
+                                    <img src="https://img.a.transfermarkt.technology/portrait/medium/523-1502276656.jpg?lm=1"
+                                        alt="Ivo" class="profile-image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-item-right" style="flex-basis: 75%;">
+                            <div class="name svelte-evkkhn">
+                                <a href="../perfildt/Ivo.html" title="Ivo" target=""
+                                    class="name svelte-evkkhn">Ivo</a>
+                            </div>
+                            <div class="row-data trainer-position svelte-rb09fj">
+                                <span class="value svelte-rb09fj">Entrenador</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+    <script src="../js/conteo.js"> </script>
+</body>
+
+</html>

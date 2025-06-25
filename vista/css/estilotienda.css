@@ -1,0 +1,142 @@
+.container-fluid {
+  /* width: 98%; */
+  max-width: 1800px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.button-container button {
+  border: none;
+  outline: none;
+  padding: 15px 100px;
+  background: #2287ed;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background: #2889ea;
+}
+
+.button-container button:active {
+  background: #1781ec
+}
+
+
+
+
+/*--- Image hover Effects
+-----------------------------------------------*/
+.image-zoom-effect {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-zoom-effect .image-holder {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-zoom-effect:hover .image-holder {
+  transform: scale(0.95);
+}
+
+.image-zoom-effect img {
+  transform: scale(1);
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.image-zoom-effect:hover img {
+  transform: scale(1.1);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre ítems */
+  justify-content: space-between; /* Espaciado uniforme entre ítems */
+}
+
+.col-md-4 {
+  flex: 0 0 calc(33.33% - 20px); /* 3 columnas por fila con espacio */
+  box-sizing: border-box;
+}
+
+.item {
+  margin-bottom: 20px; /* Separación entre filas */
+}
+
+.direct-headline{
+  align-items: center;
+}
+
+/* Estilos para pantallas pequeñas (teléfonos) */
+@media (max-width: 768px) {
+  .container-fluid {
+      max-width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+      padding: 10px; /* Añade espacio interno para evitar bordes abruptos */
+      text-align: center;
+  }
+
+  .row {
+      gap: 10px; /* Reduce el espacio entre ítems */
+      justify-content: center; /* Centra los ítems para pantallas pequeñas */
+      text-align: center;
+  }
+
+  .product-button {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el texto del botón */
+    align-items: center; /* Centra verticalmente el texto del botón */
+    text-align: center; /* Asegura que el texto dentro del botón esté centrado */
+    padding: 10px; /* Añade un poco de relleno al botón para mayor confort */
+  }
+
+  .product-button a {
+    text-align: center; /* Centra el texto dentro del enlace del botón */
+  }
+
+  .col-md-4 {
+      flex: 0 0 calc(100% - 10px); /* Cada ítem ocupa todo el ancho menos el espacio entre ellos */
+      margin-bottom: 15px; /* Espaciado inferior ajustado */
+      text-align: center;
+  }
+
+  .item {
+      margin-bottom: 10px; /* Reduce la separación entre filas */
+      text-align: center;
+  }
+
+  .image-zoom-effect .image-holder {
+      transform: scale(1);
+      transition: transform 0.4s ease-in-out; /* Suaviza la animación para móviles */
+      text-align: center;
+  }
+
+  .image-zoom-effect img {
+      transform: scale(1);
+      transition: transform 0.4s ease-in-out; /* Animación más lenta para mejorar la experiencia táctil */
+  }
+
+  .image-zoom-effect:hover .image-holder,
+  .image-zoom-effect:hover img {
+      transform: scale(1.05); /* Reduce el efecto de zoom para pantallas pequeñas */
+  }
+
+  .direct-headline {
+      text-align: center; /* Alinea los encabezados al centro para pantallas pequeñas */
+      font-size: 18px; /* Ajusta el tamaño de fuente */
+      margin-bottom: 10px; /* Espaciado inferior para separación visual */
+  }
+}

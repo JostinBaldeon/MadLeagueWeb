@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Principal</title>
+  <link rel="icon" type="image/png" href="Vista/img/icologotorneo.png">
+  <link rel="stylesheet" href="Vista/css/home.css">
+  <link rel="stylesheet" href="Vista/css/estilohome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- Botón de menú hamburguesa (fuera de la barra) -->
+  <button class="menu-toggle" aria-label="Abrir menú">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="container">
+    <header class="tm-header">
+      <div class="tm-header__box ">
+        <a href='Home.html'>
+          <img class="icon-logo" src="Vista/img/logopagina.png" title="Transfermad" alt="Transfermad">
+        </a>
+
+        <div class="tm-header__social-box">
+          <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank" class="header__social-link"
+            onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+            <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20" height="20"
+              class="header__icon">
+          </a>
+        </div>
+
+        <div class="iniciar_sesion">
+          <a href="# " class="header__social-link"><i class="fa fa-user"></i>
+            Iniciar Sesion</a>
+        </div>
+
+        <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+          <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="vista/buscadora.html"
+            method="GET">
+            <input type="text" name="query" class="tm-header__input--search-field"
+              placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off" spellcheck="false"
+              value="" />
+            <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="main-navbar">
+      <!-- Botón de cerrar dentro de la barra -->
+      <button class="close-menu" aria-label="Cerrar menú">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <ul class="main-navbar__container">
+        <li class="main-navbar__list" data-nav-group="news">
+          <a href='Vista/Noticias.html'>
+            <span class="main-navbar__list-title ">Noticias</span>
+          </a>
+        </li>
+        <li class="main-navbar__list" data-nav-group="marktwerte">
+          <a href="Vista/Halldelafama.html">
+            <span class="main-navbar__list-title ">Hall de la fama</span>
+          </a>
+        </li>
+        <li class="main-navbar__list" data-nav-group="marktwerte">
+          <a href="Vista/Valoraciones.html">
+            <span class="main-navbar__list-title ">Valoraciones</span>
+          </a>
+        </li>
+        <li class="main-navbar__list" data-nav-group="marktwerte">
+          <a href="Vista/Tienda.html">
+            <span class="main-navbar__list-title ">Tienda</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <!-- Body -->
+        <div class="caja1">
+          <div class="video-background">
+            <video autoplay muted loop>
+              <source src="Vista/slider0.mp4" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+            </video>
+          </div>
+          <div class="content">
+            <h1>TE DAMOS LA BIENVENIDA AL TRANSFERMAD</h1>
+            <p>TRANSFERMAD está aquí. Únete para explorar el
+              contenido con más de 60 futbolistas, 20 equipos y 2 ligas.</p>
+          </div>
+        </div>
+        <div class="caja2">
+          <img src="Vista/img/logopagina.png">
+          <h1><strong> EL MERCADO DE TODOS</strong></h1>
+          <p>Esta pagina alberga todas las ligas y futbolistas del Mad League</p>
+        </div>
+        <div class="caja3">
+          <img src="Vista/img/copas/LogoChampionsLeague.png">
+          <img src="Vista/img/copas/LogoEuropaLeague.png">
+          <img src="Vista/img/copas/LogoSuperCopaUefa.png">
+        </div>
+        <div class="caja4">
+          <div class="caja4__texto">
+            <p>La Mad League 1, La Mad League 2, La Mad Cup, La Mad Super Cup, la UEFA Champions League, la UEFA Europa
+              League <br>y la UEFA
+              Super Cup
+              son las competencias de nuestro torneo.</p>
+          </div>
+          <div class="caja4__video">
+            <video autoplay loop muted playsinline>
+              <source src="Vista/slider1.mp4" type="video/mp4">
+              Tu navegador no soporta la etiqueta de video.
+            </video>
+          </div>
+        </div>
+        <div class="caja5">
+          <div class="caja5__imagen">
+            <img src="Vista/img/Totyfondo30.png">
+          </div>
+          <div class="caja5__texto">
+            <p>Nuestro ultimo mejor XI de los Toty<br>de jugadores reales</p>
+          </div>
+        </div>
+        <div class="caja6">
+          <div class="caja6__texto">
+            <p>Nuestro ultimo mejor XI de los Toty<br>de jugadores creados</p>
+          </div>
+          <div class="caja6__imagen">
+            <img src="Vista/img/Totycreadofondo30.png">
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="Vista/js/esconderbarra.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Principal</title>
+  <link rel="icon" type="image/png" href="Vista/img/icologotorneo.png">
+  <link rel="stylesheet" href="Vista/css/home.css">
+  <link rel="stylesheet" href="Vista/css/estilohome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- Botón de menú hamburguesa (fuera de la barra) -->
+  <button class="menu-toggle" aria-label="Abrir menú">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="container">
+    <header class="tm-header">
+      <div class="tm-header__box ">
+        <a href='Home.html'>
+          <img class="icon-logo" src="Vista/img/logopagina.png" title="Transfermad" alt="Transfermad">
+        </a>
+
+        <div class="tm-header__social-box">
+          <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank" class="header__social-link"
+            onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+            <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20" height="20"
+              class="header__icon">
+          </a>
+        </div>
+
+        <div class="iniciar_sesion">
+          <a href="# " class="header__social-link"><i class="fa fa-user"></i>
+            Iniciar Sesion</a>
+        </div>
+
+        <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+          <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="Vista/buscadora.html"
+            method="GET">
+            <input type="text" name="query" class="tm-header__input--search-field"
+              placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off" spellcheck="false"
+              value="" />
+            <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" />
+          </form>
+        </div>
+      </div>
+    </header>
+
+
+
+  </div>
+
+  <script src="Vista/js/busquedapre.js"></script>
+</body>
+
+</html>

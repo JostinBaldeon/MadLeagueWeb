@@ -1,0 +1,142 @@
+/* Estilo base (para pantallas grandes, como en escritorios) */
+.box {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-box-headline {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.grid-view .items {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grid-view .items th,
+.grid-view .items td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+/* Estilo para nombres de futbolistas/equipos/DT */
+.grid-view .items td a {
+    text-decoration: none; /* Quitar el subrayado */
+    color: black;          /* Cambiar el color a negro */
+
+}
+
+/* Hover: Opcional para resaltar al pasar el mouse */
+.grid-view .items td a:hover {
+    color: #181818;        /* Cambiar el color al pasar el mouse (azul, opcional) */
+    text-decoration: none; /* Subrayar al pasar el mouse */
+}
+
+
+.grid-view .items th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.grid-view .items tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.grid-view .items img.bilderrahmen-fixed {   
+    width: 56px;
+    height: 72px;
+}
+
+.grid-view .items .flaggenrahmen {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.grid-view .items .tiny_wappen {
+    width: 20px;
+    height: 20px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Responsividad para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .content-box-headline {
+        font-size: 20px;
+    }
+
+    .grid-view .items th,
+    .grid-view .items td {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .grid-view .items img.bilderrahmen-fixed {
+        width: 48px;
+        height: 60px;
+    }
+}
+
+/* Responsividad para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .box {
+        padding: 10px;
+    }
+
+    .content-box-headline {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .grid-view .items {
+        display: block; /* Tabla se comporta como bloque */
+        overflow-x: auto; /* Agrega scroll horizontal */
+    }
+
+    .grid-view .items table {
+        width: 100%;
+    }
+
+    .grid-view .items th,
+    .grid-view .items td {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .grid-view .items img.bilderrahmen-fixed {
+        width: 40px;
+        height: 50px;
+    }
+
+    .pagination button {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}

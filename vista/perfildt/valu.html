@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Valu</title>
+    <link rel="icon" type="image/png" href="../img/icologotorneo.png">
+    <link rel="stylesheet" href="../css/perfildt.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+
+<body>
+    <!-- Botón de menú hamburguesa (fuera de la barra) -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="container">
+        <header class="tm-header">
+            <div class="tm-header__box ">
+                <a href="../../Home.html">
+                    <img class="icon-logo" src="../img/logopagina.png" height="62" width="156" title="TransferMad"
+                        alt="TransferMad">
+                </a>
+
+                <div class="tm-header__social-box">
+                    <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank"
+                        class="header__social-link" onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+                        <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20"
+                            height="20" class="header__icon">
+                    </a>
+                </div>
+                <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+                    <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="../buscadora.html"
+                        method="GET">
+                        <input type="text" name="query" class="tm-header__input--search-field"
+                            placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off"
+                            spellcheck="false" value="" />
+                        <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barra de navegación -->
+        <nav class="main-navbar">
+            <!-- Botón de cerrar dentro de la barra -->
+            <button class="close-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <ul class="main-navbar__container">
+                <li class="main-navbar__list" data-nav-group="news">
+                    <a href='../noticias.html'>
+                        <span class="main-navbar__list-title ">Noticias</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../Halldelafama.html">
+                        <span class="main-navbar__list-title ">Hall de la fama</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../Valoraciones.html">
+                        <span class="main-navbar__list-title ">Valoraciones</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../Tienda.html">
+                        <span class="main-navbar__list-title ">Tienda</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+
+                <!--Perfil-->
+
+                <header class="data-header">
+                    <div class="data-header__ribbon">
+                    </div>
+                    <div class="data-header__headline-container">
+                        <h1 class="data-header__headline-wrapper">
+
+                            <strong>Valu</strong>
+                        </h1>
+
+                    </div>
+                    <div class="data-header__badge-container">
+                        <a href="/lionel-messi/erfolge/spieler/28003" title="Primera Division"
+                            class="data-header__success-data">
+                            <img src="../img/copas/PrimeraDivision.png" title="Primera Division" alt="Primera Division"
+                                class="" />
+                            <span class="data-header__success-number">3</span>
+                        </a>
+                        <a href="/lionel-messi/erfolge/spieler/28003" title="Copa del Rey"
+                            class="data-header__success-data">
+                            <img src="../img/copas/CopadelRey.png" title="Copa del Rey" alt="Copa del Rey" class="" />
+                            <span class="data-header__success-number">1</span>
+                        </a>
+                        <a href="/lionel-messi/erfolge/spieler/28003" title="Champions League"
+                            class="data-header__success-data">
+                            <img src="../img/copas/ChampionsLeague.png" width="80px" height="50px"
+                                title="Champions League" alt="Champions League" class="" />
+                            <span class="data-header__success-number">1</span>
+                        </a>
+                        <a href="/lionel-messi/erfolge/spieler/28003" title="Super Copa"
+                            class="data-header__success-data">
+                            <img src="../img/copas/SuperCopa.png" width="70px" height="40px" title="Super Copa"
+                                alt="Super Copa" class="" />
+                            <span class="data-header__success-number">1</span>
+                        </a>
+                        <a href="/lionel-messi/erfolge/spieler/28003" title="Super Copa Uefa"
+                            class="data-header__success-data">
+                            <img src="../img/copas/SuperCopaUefa.png" width="80px" height="50px" title="Super Copa Uefa"
+                                alt="Super Copa Uefa" class="" />
+                            <span class="data-header__success-number">1</span>
+                        </a>
+
+                    </div>
+
+                    <div class="data-header__box--big">
+                        <a href="../perfilclub/libres.html" class="data-header__box__club-link">
+                            <img src="../img/logoclubes/libre.png" alt="libre" height="80" width="80" />
+                        </a>
+                        <div class="data-header__club-info">
+                            <span class="data-header__club" itemprop="affiliation">
+                                <a title="libre" href="../perfilclub/libres.html">Libre</a>
+                            </span><br />
+                            <span class="data-header__league">
+                                <a class="data-header__league-link" href="../listadeclubes.html">
+                                    MadLeague </a>
+                            </span>
+                            <span class="data-header__label">Liga:
+                                <span class="data-header__content">
+                                    Primera División
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="data-header__profile-container">
+                        <div class="modal-trigger" data-custom-open="modal-1" id="fotoauswahlOeffnen"
+                            style="cursor:pointer" onclick="tmEvent('spielerprofil','click','profilbild');">
+
+                            <img src="#" title="Valu" alt="Valu" class="data-header__profile-image" height="181"
+                                width="139" />
+                        </div>
+                    </div>
+
+                    <div class="data-header__info-box ">
+                        <div class="data-header__details">
+                            <ul class="data-header__items">
+
+                                <li for="" class="data-header__label">
+                                    Nacionalidad:
+                                    <span class="data-header__content">
+                                        <img src="../img/banderas/Argentinapequeño.png" title="Argentina"
+                                            alt="Argentina" class="flaggenrahmen flagge" /><span title="Argentina"
+                                            href="">Argentina</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="news-archiv__header">
+                    <div class="direct-headline">
+                        <div class="direct-headline__header-box">
+                            <h2 class="direct-headline__header direct-headline__header--highlight-blue">Vitrina</h2>
+                            <button class="toggle-button" data-target="#vitrina-content" aria-expanded="true"></button>
+                        </div>
+                    </div>
+                </section>
+
+
+                <div id="vitrina-content" class="toggle-content">
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <div class="row">
+                                <div class="large-3 columns">
+                                    <div class="box">
+                                        <h2 class="content-box-headline">
+                                            3x Primera Division </h2>
+                                        <div>
+                                            <div class="erfolg_info_box">
+                                                <table class="auflistung">
+                                                    <tr>
+                                                        <td class="erfolg_table_saison">x1</td>
+                                                        <td class="erfolg_table_wappen"><a title="PSG"
+                                                                href="../perfilclub/PSG.html"><img
+                                                                    src="../img/logoclubes/PSG.png" title="PSG"
+                                                                    alt="PSG" class="tiny_wappen" /></a></td>
+                                                        <td><a title="PSG" href="../perfilclub/PSG.html">PSG
+                                                            </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="erfolg_table_saison">x1</td>
+                                                        <td class="erfolg_table_wappen"><a title="Tottenham"
+                                                                href="../perfilclub/Tottenham.html"><img
+                                                                    src="../img/logoclubes/Tottenham.png"
+                                                                    title="Tottenham" alt="Real Madrid CF"
+                                                                    class="tiny_wappen" /></a></td>
+                                                        <td><a title="Tottenham"
+                                                                href="../perfilclub/Tottenham.html">Tottenham
+                                                            </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="erfolg_table_saison">x1</td>
+                                                        <td class="erfolg_table_wappen"><a title="Real Madrid"
+                                                                href="../perfilclub/RealMadrid.html"><img
+                                                                    src="../img/logoclubes/realmadrid.png"
+                                                                    title="Real Madrid" alt="Real Madrid"
+                                                                    class="tiny_wappen" /></a></td>
+                                                        <td><a title="Real Madrid"
+                                                                href="../perfilclub/RealMadrid.html">Real
+                                                                Madrid
+                                                            </a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="clearer"></div>
+                                        <div class="footer">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="large-3 columns">
+                                    <div class="box">
+                                        <h2 class="content-box-headline">
+                                            1x Copa del Rey </h2>
+                                        <div>
+                                            <div class="erfolg_info_box">
+                                                <table class="auflistung">
+                                                    <tr>
+                                                        <td class="erfolg_table_saison">x1</td>
+                                                        <td class="erfolg_table_wappen"><a title="MIlan"
+                                                                href="../perfilclub/MIlan.html"><img
+                                                                    src="../img/logoclubes/MIlan.png" title="MIlan"
+                                                                    alt="MIlan" class="tiny_wappen" /></a></td>
+                                                        <td><a title="MIlan" href="../perfilclub/MIlan.html">MIlan
+                                                            </a></td>
+                                                    </tr>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="clearer"></div>
+                                        <div class="footer">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="large-3 columns">
+                                    <div class="box">
+                                        <h2 class="content-box-headline">
+                                            1x Champions League</h2>
+                                        <div>
+                                            <div class="erfolg_info_box">
+                                                <table class="auflistung">
+                                                    <tr>
+                                                        <td class="erfolg_table_saison">x1</td>
+                                                        <td class="erfolg_table_wappen"><a title="Real Madrid"
+                                                                href="../perfilclub/RealMadrid.html"><img
+                                                                    src="../img/logoclubes/realmadrid.png"
+                                                                    title="Real Madrid" alt="Real Madrid"
+                                                                    class="tiny_wappen" /></a></td>
+                                                        <td><a title="Real Madrid"
+                                                                href="../perfilclub/RealMadrid.html">Real
+                                                                Madrid
+                                                            </a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-3 columns">
+                                    <div class="box">
+                                        <h2 class="content-box-headline">
+                                            1x Super Copa </h2>
+                                        <div>
+
+                                            <div class="erfolg_info_box">
+                                                <table class="auflistung">
+                                                    <tr>
+                                                        <td class="erfolg_table_saison">x1</td>
+                                                        <td class="erfolg_table_wappen"><a title="Tottenham"
+                                                                href="../perfilclub/Tottenham.html"><img
+                                                                    src="../img/logoclubes/Tottenham.png"
+                                                                    title="Tottenham" alt="Real Madrid CF"
+                                                                    class="tiny_wappen" /></a></td>
+                                                        <td><a title="Tottenham"
+                                                                href="../perfilclub/Tottenham.html">Tottenham
+                                                            </a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="large-3 columns">
+                                    <div class="box">
+                                        <h2 class="content-box-headline">
+                                            1x Super Copa Uefa </h2>
+                                        <div>
+                                            <div class="erfolg_info_box">
+                                                <table class="auflistung">
+                                                    <tr>
+                                                        <td class="erfolg_table_saison">x1</td>
+                                                        <td class="erfolg_table_wappen"><a title="Real Madrid"
+                                                                href="../perfilclub/RealMadrid.html"><img
+                                                                    src="../img/logoclubes/realmadrid.png"
+                                                                    title="Real Madrid" alt="Real Madrid"
+                                                                    class="tiny_wappen" /></a></td>
+                                                        <td><a title="Real Madrid"
+                                                                href="../perfilclub/RealMadrid.html">Real
+                                                                Madrid
+                                                            </a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="large-3 columns">
+                                    <div class="box">
+                                        <h2 class="content-box-headline">
+                                            24x Nominaciones al TOTY </h2>
+                                        <div>
+                                            <div class="erfolg_info_box">
+                                                <table class="auflistung">
+                                                    <tr>
+                                                        <td class="erfolg_table_saison">x24</td>
+                                                        <td class="erfolg_table_wappen"><a title="Roma"
+                                                                href="../perfildt/Marquito.html"><img
+                                                                    src="../img/copas/Toty.png" title="Roma" alt="Roma"
+                                                                    class="tiny_wappen" /></a></td>
+                                                        <td><a title="Roma" href="../perfildt/Marquito.html">TOTY
+                                                            </a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="news-archiv__header">
+                    <div class="direct-headline">
+                        <div class="direct-headline__header-box">
+                            <h2 class="direct-headline__header direct-headline__header--highlight-blue">Cara a cara</h2>
+                            <button class="toggle-button" data-target="#caraacara-content"
+                                aria-expanded="true"></button>
+                        </div>
+                    </div>
+                </section>
+
+                <div id="caraacara-content" class="toggle-content">
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <p class="Leyenda-caraacara">
+                                <strong>DT:</strong>Director Técnico
+                                <strong>PJ:</strong>Partidos Jugados
+                                <strong>V:</strong>Victorias
+                                <strong>E:</strong>Empates
+                                <strong>D:</strong>Derrotas
+                                <strong>GF:</strong>Goles a Favor
+                                <strong>GC:</strong>Goles en Contra
+                            </p>
+                            <table class="caraacara-table">
+                                <thead>
+                                    <tr>
+                                        <th>DT</th>
+                                        <th>PJ</th>
+                                        <th>V</th>
+                                        <th>E</th>
+                                        <th>D</th>
+                                        <th>GF</th>
+                                        <th>GC</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Ejemplo de filas -->
+                                    <tr>
+                                        <td>G</td>
+                                        <td>22</td>
+                                        <td>11</td>
+                                        <td>2</td>
+                                        <td>9</td>
+                                        <td>21</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ivo</td>
+                                        <td>4</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Luquitas</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Josue</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proximo</td>
+                                        <td>...</td>
+                                        <td>...</td>
+                                        <td>...</td>
+                                        <td>...</td>
+                                        <td>...</td>
+                                        <td>...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+    <script defer src="../js/maximizarfoto.js"></script>
+    <script defer src="../js/nousarbotonhamburguesamovil.js"></script>
+    <script defer src="../js/esconderbarra.js"></script>
+    <script defer src="../js/barradedespliegue.js"></script> 
+
+</body>
+
+</html>

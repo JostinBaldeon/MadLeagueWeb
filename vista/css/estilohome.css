@@ -1,0 +1,127 @@
+.caja1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    background-color: white;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegurará que el video cubra todo el div sin distorsionarse */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Cambia esto según el contraste necesario */
+    
+    text-align: center; /* Alineación centrada del texto */
+}
+
+
+.caja2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: -0.025em;
+    align-items: center;
+    height: 400px; /* Puedes ajustar la altura según tus necesidades */
+    padding: 20px;
+    text-align: center;
+    color: #000000;
+    background-color: white;
+    background-size: cover; /* Cubrir todo el fondo */
+}
+
+.caja3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px; /* Puedes ajustar la altura según tus necesidades */
+    padding: 30px;
+    text-align: center;
+    background:url('../img/fondorayado.jpg');
+    background-size: cover; /* Cubrir todo el fondo */
+}
+
+.caja3 img{
+    width: 46px; /* La imagen no excederá el ancho de su contenedor */
+    height: 56px; /* Mantiene la proporción de la imagen */
+}
+
+.caja4 {
+    display: flex;
+    justify-content: center; /* Espacio entre las columnas */
+    align-items: center; /* Alinea verticalmente los elementos */
+    
+}
+
+.caja4__texto {
+    flex: 1; /* Ocupa el espacio necesario */
+    text-align: center;
+
+}
+
+.caja4__video {
+    flex: 1; /* Ocupa el espacio necesario */
+}
+
+.caja4__video video {
+    width: 100%; /* El video ocupará el ancho del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+    display: block; /* Elimina el espacio en línea debajo del video */
+}
+
+.caja5 {
+    display: flex;
+    justify-content: center; /* Espacio entre las columnas */
+    align-items: center; /* Alinea verticalmente los elementos */   
+}
+
+.caja5__texto {
+    flex: 1; /* Ocupa el espacio necesario */
+    text-align: center;
+}
+
+.caja5__imagen {
+    flex: 1; /* Ocupa el espacio necesario */
+}
+
+.caja5__imagen img {
+    width: 100%; /* El video ocupará el ancho del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+    display: block; /* Elimina el espacio en línea debajo del video */
+}
+
+.caja6 {
+    display: flex;
+    justify-content: center; /* Espacio entre las columnas */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.caja6__texto {
+    flex: 1; /* Ocupa el espacio necesario */
+    text-align: center;
+
+}
+
+.caja6__imagen {
+    flex: 1; /* Ocupa el espacio necesario */
+}
+
+.caja6__imagen img {
+    width: 100%; /* El video ocupará el ancho del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+    display: block; /* Elimina el espacio en línea debajo del video */
+}

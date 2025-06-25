@@ -1,0 +1,326 @@
+html,
+body,
+main {
+    height: 100%;
+}
+
+body main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+main .roulette-container {
+    position: relative;
+    
+}
+
+main .roulette-container #selector {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    display: inline-block;
+    width: 0%;
+    height: 0%;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #c03131;
+    z-index: 1;
+    transform: translateX(-50%);
+    
+
+}
+
+#roulette {
+
+    width: 400px;
+    height: 400px;
+    position: relative;
+    font-size: 14px;
+    overflow: hidden;
+    border-radius: 100%;
+    transition-property: transform;
+    transform: rotate(0deg);
+    
+
+}
+
+#roulette .roulette-section {
+    position: absolute;
+    overflow: hidden;
+    font-size: 8px;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+}
+
+#roulette .roulette-section .roulette-section-container {
+    position: absolute;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    text-align: center;
+    padding-top: 60px;
+    transform: skewY(60deg) rotate(30deg);
+
+}
+
+#roulette .roulette-section .roulette-section-container p {
+    margin-top: 1px;
+    transform: rotate(90deg);
+
+}
+
+.button-container {
+    margin-top: 50px;
+}
+
+.button-container button#reset {
+    display: none;
+}
+
+#roulette .roulette-section:nth-child(1) .roulette-section-container {
+    background: #FF5733; /* Rojo brillante */
+}
+#roulette .roulette-section:nth-child(2) .roulette-section-container {
+    background: #C70039; /* Rojo oscuro */
+}
+#roulette .roulette-section:nth-child(3) .roulette-section-container {
+    background: #900C3F; /* Morado intenso */
+}
+#roulette .roulette-section:nth-child(4) .roulette-section-container {
+    background: #581845; /* Púrpura profundo */
+}
+#roulette .roulette-section:nth-child(5) .roulette-section-container {
+    background: #1D3557; /* Azul oscuro */
+}
+#roulette .roulette-section:nth-child(6) .roulette-section-container {
+    background: #457B9D; /* Azul cielo */
+}
+#roulette .roulette-section:nth-child(7) .roulette-section-container {
+    background: #A8DADC; /* Turquesa suave */
+}
+#roulette .roulette-section:nth-child(8) .roulette-section-container {
+    background: #F1FAEE; /* Blanco cremoso */
+}
+#roulette .roulette-section:nth-child(9) .roulette-section-container {
+    background: #FFC300; /* Amarillo dorado */
+}
+#roulette .roulette-section:nth-child(10) .roulette-section-container {
+    background: #FF5733; /* Naranja vibrante */
+}
+#roulette .roulette-section:nth-child(11) .roulette-section-container {
+    background: #F4A261; /* Naranja suave */
+}
+#roulette .roulette-section:nth-child(12) .roulette-section-container {
+    background: #E76F51; /* Coral suave */
+}
+#roulette .roulette-section:nth-child(13) .roulette-section-container {
+    background: #2A9D8F; /* Verde agua */
+}
+#roulette .roulette-section:nth-child(14) .roulette-section-container {
+    background: #264653; /* Verde oscuro */
+}
+#roulette .roulette-section:nth-child(15) .roulette-section-container {
+    background: #8E44AD; /* Morado vibrante */
+}
+#roulette .roulette-section:nth-child(16) .roulette-section-container {
+    background: #3498DB; /* Azul brillante */
+}
+#roulette .roulette-section:nth-child(17) .roulette-section-container {
+    background: #2ECC71; /* Verde brillante */
+}
+#roulette .roulette-section:nth-child(18) .roulette-section-container {
+    background: #F39C12; /* Amarillo anaranjado */
+}
+#roulette .roulette-section:nth-child(19) .roulette-section-container {
+    background: #E74C3C; /* Rojo intenso */
+}
+#roulette .roulette-section:nth-child(20) .roulette-section-container {
+    background: #16A085; /* Verde azulado */
+}
+#roulette .roulette-section:nth-child(21) .roulette-section-container {
+    background: #27AE60; /* Verde pasto */
+}
+#roulette .roulette-section:nth-child(22) .roulette-section-container {
+    background: #2980B9; /* Azul vibrante */
+}
+#roulette .roulette-section:nth-child(23) .roulette-section-container {
+    background: #8E44AD; /* Púrpura intenso */
+}
+#roulette .roulette-section:nth-child(24) .roulette-section-container {
+    background: #34495E; /* Azul grisáceo */
+}
+#roulette .roulette-section:nth-child(25) .roulette-section-container {
+    background: #F4D03F; /* Amarillo suave */
+}
+
+#roulette .roulette-section:nth-child(1) {
+    transform: rotate(0deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(2) {
+    transform: rotate(14.4deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(3) {
+    transform: rotate(28.8deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(4) {
+    transform: rotate(43.2deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(5) {
+    transform: rotate(57.6deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(6) {
+    transform: rotate(72deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(7) {
+    transform: rotate(86.4deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(8) {
+    transform: rotate(100.8deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(9) {
+    transform: rotate(115.2deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(10) {
+    transform: rotate(129.6deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(11) {
+    transform: rotate(144deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(12) {
+    transform: rotate(158.4deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(13) {
+    transform: rotate(172.8deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(14) {
+    transform: rotate(187.2deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(15) {
+    transform: rotate(201.6deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(16) {
+    transform: rotate(216deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(17) {
+    transform: rotate(230.4deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(18) {
+    transform: rotate(244.8deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(19) {
+    transform: rotate(259.2deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(20) {
+    transform: rotate(273.6deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(21) {
+    transform: rotate(288deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(22) {
+    transform: rotate(302.4deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(23) {
+    transform: rotate(316.8deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(24) {
+    transform: rotate(331.2deg) skewY(-75.5deg);
+}
+
+#roulette .roulette-section:nth-child(25) {
+    transform: rotate(345.6deg) skewY(-75.5deg);
+}
+
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.button-container button {
+    border: none;
+    outline: none;
+    padding: 15px 100px;
+    background: #000000;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background: #2b2a2a;
+}
+
+.button-container button:active {
+    background: #2e2e2e
+}
+
+/* Estilos para pantallas pequeñas (teléfonos) */
+@media (max-width: 768px) {
+    body main {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    #roulette {
+        width: 250px;
+        height: 250px;
+        font-size: 10px;
+    }
+
+    #roulette .roulette-section .roulette-section-container {
+        padding-top: 40px;
+    }
+
+    main .roulette-container #selector {
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 25px solid #c03131;
+        top: -10px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button-container button {
+        padding: 10px 50px;
+        font-size: 18px;
+    }
+}

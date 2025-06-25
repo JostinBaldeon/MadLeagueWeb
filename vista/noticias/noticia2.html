@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="icon" type="image/png" href="../img/icologotorneo.png">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/estilonoticias.css">
+    <link rel="stylesheet" href="../css/estilocomplparanoticias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Botón de menú hamburguesa (fuera de la barra) -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="container">
+        <header class="tm-header">
+            <div class="tm-header__box ">
+                <a href="../../Home.html">
+                    <img class="icon-logo" src="../img/logopagina.png" height="62" width="156" title="Transfermarkt"
+                        alt="Transfermarkt">
+                </a>
+                <tm-domainswitcher open-list="false" tld="es"></tm-domainswitcher>
+                <div class="tm-header__social-box">
+                    <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank"
+                        class="header__social-link" onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+                        <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20"
+                            height="20" class="header__icon">
+                    </a>
+                </div>
+                <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+                    <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="buscadora.html"
+                        method="GET">
+                        <input type="text" name="query" class="tm-header__input--search-field"
+                            placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off"
+                            spellcheck="false" value="" />
+                        <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!--Fin Barra de paginas-->
+        <nav class="main-navbar">
+            <!-- Botón de cerrar dentro de la barra -->
+            <button class="close-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <ul class="main-navbar__container">
+                <li class="main-navbar__list" data-nav-group="news">
+                    <a href='../Noticias.html'>
+                        <span class="main-navbar__list-title ">Noticias</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../Halldelafama.html">
+                        <span class="main-navbar__list-title ">Hall de la fama</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../Valoraciones.html">
+                        <span class="main-navbar__list-title ">Valoraciones</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--Barra de paginas-->
+        <main>
+            <div class="tm-content-template">
+
+                <section class="container__grid">
+                    <section class="container__grid-column--large_especifica">
+                        <div class="titulo_noticia">
+                            <h2>‎ ¡OFICIAL! HALAAND SUPERÓ SU RÉCORD DE GOLES </h2>
+                        </div>
+                        <div class="credito_noticia">
+                            <h6>‎‎ Ivo Boca
+                                ·
+                                11 de noviembre de 2024 </h6>
+                        </div>
+
+                        <!-- Container principal para el texto y la imagen -->
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <p>El noruego, quien se encuentra en el Real Madrid, lleva en total 25 goles
+                                    superando de esta manera los 18 tantos que marcó en la pasada temporada cuando
+                                    se encontraba en el Manchester City. A falta de dos fechas, el único que podría
+                                    alcanzarlo es Kylian Mbappé, actualmente jugador del Chelsea, con 15 conquistas.
+                                    Pero, se ve bastante difícil que el francés haga la hazaña ya que el noruego
+                                    tiene un buen porcentaje de efectividad de cara al arco.</p>
+                                <!-- TExto para continuar si la noticia es larga
+                                    <p>Continúa el detalle de la noticia. Puedes ajustar el tamaño de la fuente y el
+                                        espaciado para una mejor legibilidad.</p> -->
+
+                            </div>
+
+                            <!-- Contenedor de la imagen -->
+                            <div class="image-content">
+                                <img src="../img/noticias/HAALANDSUPERARECORD.jpg" alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+
+                    </section>
+                </section>
+
+
+                <section class="container__grid-column--large_especifica">
+
+                    <div class="image-content_complemento">
+                        <img src="../img/noticias/noticia2_complemento.png" alt="Descripción de la imagen">
+                    </div>
+
+
+                </section>
+
+            </div>
+        </main>
+    </div>
+    <script src="../js/esconderbarra.js"></script>
+</body>
+
+</html>

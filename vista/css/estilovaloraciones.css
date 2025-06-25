@@ -1,0 +1,86 @@
+.tm-content-template{
+    background-color: #ffffff9b;
+    font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    color: #000000;
+}
+
+.container-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+.team-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-button img {
+    width: 50px; /* Ajusta el tamaño del logo según prefieras */
+    height: 50px;
+    margin-bottom: 5px; /* Espacio entre el logo y el nombre */
+}
+
+.direct-headline__header-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.direct-headline__header {
+    margin: 0;
+    color: #000000;
+}
+
+#tablaValoracion {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tablaValoracion th, #tablaValoracion td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#tablaValoracion table {
+    margin: 20px 0;
+}
+
+.error-message {
+    color: red;
+    margin-top: 20px;
+}

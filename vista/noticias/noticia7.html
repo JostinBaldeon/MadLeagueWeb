@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="icon" type="image/png" href="../img/icologotorneo.png">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/estilonoticias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Botón de menú hamburguesa (fuera de la barra) -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="container">
+        <header class="tm-header">
+            <div class="tm-header__box ">
+                <a href="../../Home.html">
+                    <img class="icon-logo" src="../img/logopagina.png" height="62" width="156" title="Transfermarkt"
+                        alt="Transfermarkt">
+                </a>
+                <tm-domainswitcher open-list="false" tld="es"></tm-domainswitcher>
+                <div class="tm-header__social-box">
+                    <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank"
+                        class="header__social-link" onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+                        <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20"
+                            height="20" class="header__icon">
+                    </a>
+                </div>
+                <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+                    <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="buscadora.html"
+                        method="GET">
+                        <input type="text" name="query" class="tm-header__input--search-field"
+                            placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off"
+                            spellcheck="false" value="" />
+                        <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!--Fin Barra de paginas-->
+        <!-- Barra de navegación -->
+        <nav class="main-navbar">
+            <!-- Botón de cerrar dentro de la barra -->
+            <button class="close-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <ul class="main-navbar__container">
+                <li class="main-navbar__list" data-nav-group="news">
+                    <a href='../Noticias.html'>
+                        <span class="main-navbar__list-title ">Noticias</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../Halldelafama.html">
+                        <span class="main-navbar__list-title ">Hall de la fama</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../Valoraciones.html">
+                        <span class="main-navbar__list-title ">Valoraciones</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--Barra de paginas-->
+        <main>
+            <div class="tm-content-template">
+
+                <section class="container__grid">
+                    <section class="container__grid-column--large_especifica">
+                        <div class="titulo_noticia">
+                            <h2>Premiacion Temporada 34° </h2>
+                        </div>
+                        <div class="credito_noticia">
+                            <h6>‎‎Ivo
+                                ·
+                                23 de diciembre de 2024 </h6>
+                        </div>
+
+                        <!-- Container principal para el texto y la imagen -->
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <p> La temporada 34 tuvo un cierre muy especial ya que varios equipos fueron partícipes
+                                    para quedarse con varios títulos. De ellos, varias figuras fueron galardonadas con
+                                    los siguientes premios:
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/balondeoro.jpg" alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <!-- Container principal para el texto y la imagen -->
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4>Balón de oro: Robert Lewandowski</h4>
+                                <p> El polaco tuvo una actuación fenomenal en el FC Barcelona, ya que con su actitud,
+                                    destreza y habilidad dentro de la cancha el elenco culé fue importante en todas las
+                                    competiciones.
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34BDOLewa.webp" alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4>Bota de oro: Robert Lewandowski
+                                </h4>
+                                <p> Nuevamente, el delantero fue premiado con este reconocimiento por ser el máximo
+                                    anotador de la competición, con 24 goles. Seguramente, la siguiente temporada será
+                                    igual o mejor.</p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34BotaDOLewa.webp" alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4>Golden Boy: Jamal Musiala
+                                </h4>
+                                <p> La gran promesa del Bayern Munich. Talento puro, destreza, ingenio a la hora de jugar al fútbol. Un gran reconocimiento para que, según la opinión de varios jugadores, llegará a ser uno de los mejores jugadores del mundo.
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34GBMusiala.webp" alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4>Guante de oro: Manuel Neuer
+                                </h4>
+                                <p> El arquero de 38 años sigue siendo una muralla en los tres palos. Su gran actuación fue determinante para lograr un nuevo título en la última fecha y en una definición apasionante.
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34GDONeuer.webp" alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4>Jugador revelación: Lautaro Martínez
+                                </h4>
+                                <p> El “Toro” siempre da mucho de que hablar, ya que siempre dice presente en cada área rival y la manda a guardar. Aunque sus goles los veremos en segunda división, el Inter será candidato en todo lo que se proponga.
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34JRLautaro.webp"
+                                    alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4> Mejor DT de la temporada: Gfesito
+                                </h4>
+                                <p> Sin lugar a duda el mejor director técnico, debido a que gracias a él su equipo, Bayern Munich, ganó casi todo lo que estaba en juego en esta temporada. ¿Podrá repetirlo en la siguiente?
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34MDTGfesito.webp"
+                                    alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4> Máximo goleador de Primera: Darwin Núñez
+                                </h4>
+                                <p> Gracias a sus goles, el Liverpool peleó palmo a palmo con el Bayern Munich por el título. Con sus 20 goles en su cuenta personal, de seguro que el equipo de Anfield será nuevamente importante en la liga.
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34MGPDarwin.webp"
+                                    alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4>Máximo asistidor de Primera: Mohamed Salah
+                                </h4>
+                                <p> El egipcio, con sus ocho asistencias, fue una pieza clave para que sus compañeros puedan convertir en el arco rival. Aunque no fue efectivo a la hora de marcar goles, de seguro que dará mucho de que hablar en la siguiente temporada.
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34MAPSalah.webp"
+                                    alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4> Máximo goleador de Segunda: Alexander Isak </h4>
+                                <p> El sueco terminó la temporada con 10 goles, de cerca lo acechaban Julián Álvarez y Ollie Watkins con siete conquistas. Con este gran andar, el Newcastle tiene a un gran delantero para conseguir el principal objetivo: llegar a Primera División.
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34MGSIsak.webp" alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4> Máximo asistidor de Segunda: Joao Neves </h4>
+                                <p> 
+                                    El mediocampista luso demostró que jugando en equipo siempre se llega a la victoria. Sus cuatro asistencias fueron determinantes para que Neymar y Vitinha sean los máximos goleadores del PSG, además valió una clasificación a Europa League.
+                                </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34MASNeves.webp"
+                                    alt="Descripción de la imagen">
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <!-- Contenedor de texto -->
+                            <div class="text-content">
+                                <h4> Máximo goleador de Champions League: Victor Boniface </h4>
+                                <p> El delantero nigeriano del Bayer Leverkusen tuvo una gran performance en la máximo competición a nivel clubes de Europa. Con sus cuatro conquistas, el equipo alemán llegó a la final pero estuvo cerca de alcanzar la gloria. </p>
+
+                            </div>
+
+                            <div class="image-content">
+                                <img src="../img/noticias/Temporada34MGCLBoniface.webp" alt="Máximo goleador de Champions League: Victor Boniface">
+                            </div>
+                        </div>
+
+
+                    </section>
+                </section>
+
+
+                <section class="container__grid-column--large_especifica">
+
+
+                </section>
+
+            </div>
+        </main>
+    </div>
+    <script src="../js/esconderbarra.js"></script>
+</body>
+
+</html>

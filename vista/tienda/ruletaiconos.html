@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="icon" type="image/png" href="../../Vista/img/icologotorneo.png">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/estiloruletaiconos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Botón de menú hamburguesa (fuera de la barra) -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="container">
+        <header class="tm-header">
+            <div class="tm-header__box ">
+                <a href='../../Home.html'>
+                    <img class="icon-logo" src="../img/logopagina.png" title="Transfermad" alt="Transfermad">
+                </a>
+                <tm-domainswitcher open-list="false" tld="es"></tm-domainswitcher>
+                <div class="tm-header__social-box">
+                    <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank"
+                        class="header__social-link" onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+                        <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20"
+                            height="20" class="header__icon">
+                    </a>
+                </div>
+                <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+                    <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="../buscadora.html"
+                        method="GET">
+                        <input type="text" name="query" class="tm-header__input--search-field"
+                            placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off"
+                            spellcheck="false" value="" />
+                        <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barra de navegación -->
+        <nav class="main-navbar">
+            <!-- Botón de cerrar dentro de la barra -->
+            <button class="close-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <ul class="main-navbar__container">
+                <li class="main-navbar__list" data-nav-group="news">
+                    <a href='../../Vista/Noticias.html'>
+                        <span class="main-navbar__list-title ">Noticias</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../../Vista/Halldelafama.html">
+                        <span class="main-navbar__list-title ">Hall de la fama</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../../Vista/Valoraciones.html">
+                        <span class="main-navbar__list-title ">Valoraciones</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../../Vista/Tienda.html">
+                        <span class="main-navbar__list-title ">Tienda</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Barra de paginas-->
+        <main>
+            <section class="news-archiv__header">
+                <div class="direct-headline">
+                    <div class="direct-headline__header-box">
+                        <h2 class="direct-headline__header direct-headline__header--highlight-blue">Ruleta de Iconos</h2>
+                    </div>
+                </div>
+            </section>
+
+
+                <section class="roulette-container">
+
+                    <div id="selector"></div>
+        
+                    <div id="roulette">
+        
+                        <div class="roulette-section" style="--n: 0;">
+                            <div class="roulette-section-container">
+                                <p>1</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 1;">
+                            <div class="roulette-section-container">
+                                <p>2</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 2;">
+                            <div class="roulette-section-container">
+                                <p>3</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 3;">
+                            <div class="roulette-section-container">
+                                <p>4</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 4;">
+                            <div class="roulette-section-container">
+                                <p>5</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 5;">
+                            <div class="roulette-section-container">
+                                <p>6</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 6;">
+                            <div class="roulette-section-container">
+                                <p>7</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 7;">
+                            <div class="roulette-section-container">
+                                <p>8</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 8;">
+                            <div class="roulette-section-container">
+                                <p>9</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 9;">
+                            <div class="roulette-section-container">
+                                <p>10</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 10;">
+                            <div class="roulette-section-container">
+                                <p>11</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 11;">
+                            <div class="roulette-section-container">
+                                <p>12</p>
+                            </div>
+                        </div>
+                        
+                        <div class="roulette-section" style="--n: 12;">
+                            <div class="roulette-section-container">
+                                <p>13</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 13;">
+                            <div class="roulette-section-container">
+                                <p>14</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 14;">
+                            <div class="roulette-section-container">
+                                <p>16</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 15;">
+                            <div class="roulette-section-container">
+                                <p>16</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 16;">
+                            <div class="roulette-section-container">
+                                <p>17</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 17;">
+                            <div class="roulette-section-container">
+                                <p>18</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 18;">
+                            <div class="roulette-section-container">
+                                <p>19</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 19;">
+                            <div class="roulette-section-container">
+                                <p>20</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 20;">
+                            <div class="roulette-section-container">
+                                <p>21</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 21;">
+                            <div class="roulette-section-container">
+                                <p>22</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 22;">
+                            <div class="roulette-section-container">
+                                <p>23</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 23;">
+                            <div class="roulette-section-container">
+                                <p>24</p>
+                            </div>
+                        </div>
+        
+                        <div class="roulette-section" style="--n: 24;">
+                            <div class="roulette-section-container">
+                                <p>25</p>
+                            </div>
+                        </div>     
+                           
+                    </div>
+        
+                    <div class="button-container">
+                        <button type="button" id="spin">¡Girar!</button>
+                        <button type="button" id="reset">Resetear</button>
+                    </div>
+        
+                </section>
+
+        </main>
+    </div>
+    <script defer src="../js/esconderbarra.js"></script>
+    <script defer src="../js/ruletaiconos.js"></script>
+    
+</body>
+
+</html>

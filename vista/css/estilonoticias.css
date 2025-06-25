@@ -1,0 +1,160 @@
+.tm-content-template{
+    background-color: #ffffff;
+    font-family: 'Arial Bold', sans-serif;
+    color: #ffffff;
+}
+
+.news-archiv__header {
+    margin-bottom: 20px;
+    
+}
+
+.direct-headline__header-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.direct-headline__header {
+    margin: 0;
+    color: #000000;
+}
+
+.container__grid {
+    display: flex;
+    justify-content: center;
+    align-items:center;    
+}
+
+.container__grid-column--large {
+    flex: 1;
+}
+
+.newsticker__box-big {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: flex-start; /* Alinear elementos verticalmente */
+}
+
+.newsticker__content {
+    display: flex;
+    align-items: center;
+}
+
+.newsticker__image-big {
+    margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto */
+}
+
+.newsticker__text {
+    flex-grow: 1; /* Permite que el texto ocupe todo el espacio restante */
+    text-decoration: none;
+}
+
+.newsticker__headline-big {
+    text-align: right; /* Alinea el texto a la derecha */
+    color: #000000;
+    text-decoration: none; /* Remueve la línea debajo del texto */
+    border: none; /* Asegura que no haya borde que aparezca como línea */
+}
+
+.container__grid-column--large_especifica {
+    background-color: #000000;
+}
+
+.titulo_noticia{
+    font-size:28px;
+    font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 50px;
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+    margin-left: 2%; /* Mueve todo el bloque de texto hacia la derecha */
+}
+
+.credito_noticia{
+    padding-left: 20px;
+    
+}
+
+/* Container para el contenido */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.content-container a{
+    color: #ffffff;
+    text-decoration: none;
+    border: #ffffff;
+}
+
+/* Estilos del texto */
+.text-content {
+    flex: 0 0 60%;
+    font-size: 22px;
+    line-height: 1.6;
+    
+
+    color: #ffffff;
+    text-align: justify;
+    /* Texto justificado */
+}
+
+/* Estilos de la imagen */
+.image-content {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 100%;
+
+}
+
+/* Contenedor centrado para la imagen */
+.image-content_complemento {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25%;
+}
+
+.image-content_complemento img {
+    width: 50%;
+    height: 50%;
+    border-radius: 8px;
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .text-content{
+        font-size: 14px;
+
+
+    }
+    .image-content {
+        flex: 0 1 auto; /* Ajusta el comportamiento flexible */
+        width: 40%; /* Ajusta la imagen para que use el 40% del ancho total */
+        height: auto; /* Mantiene las proporciones */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        display: block; /* Asegura que se comporte como un elemento bloque */
+
+    }
+}

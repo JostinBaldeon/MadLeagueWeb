@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats de Neymar Jr.</title>
+    <link rel="icon" type="image/png" href="../img/icologotorneo.png">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/perfiljugadorstats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+
+<body>
+    <!-- Botón de menú hamburguesa (fuera de la barra) -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="container">
+        <header class="tm-header">
+            <div class="tm-header__box ">
+                <a href='../../Home.html'>
+                    <img class="icon-logo" src="../img/logopagina.png" title="Transfermad" alt="Transfermad">
+                </a>
+                <tm-domainswitcher open-list="false" tld="es"></tm-domainswitcher>
+                <div class="tm-header__social-box">
+                    <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank"
+                        class="header__social-link" onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+                        <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20"
+                            height="20" class="header__icon">
+                    </a>
+                </div>
+                <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+                    <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="../buscadora.html"
+                        method="GET">
+                        <input type="text" name="query" class="tm-header__input--search-field"
+                            placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off"
+                            spellcheck="false" value="" />
+                        <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barra de navegación -->
+        <nav class="main-navbar">
+            <!-- Botón de cerrar dentro de la barra -->
+            <button class="close-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <ul class="main-navbar__container">
+                <li class="main-navbar__list" data-nav-group="news">
+                    <a href='../../Vista/Noticias.html'>
+                        <span class="main-navbar__list-title ">Noticias</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../../Vista/Halldelafama.html">
+                        <span class="main-navbar__list-title ">Hall de la fama</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../../Vista/Valoraciones.html">
+                        <span class="main-navbar__list-title ">Valoraciones</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="../../Vista/Tienda.html">
+                        <span class="main-navbar__list-title ">Tienda</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Perfil-->
+
+        <main>
+            <section>
+                <header class="data-header" >
+                    <div class="data-header__ribbon">
+                    </div>
+                    <div class="data-header__headline-container">
+                        <h1 class="data-header__headline-wrapper">
+
+                            <strong>Neymar Jr.</strong>
+                        </h1>
+                    </div>
+
+                    <div class="data-header__box--big">
+                        <a href="#" class="data-header__box__club-link">
+                            <img src="../img/logoclubes/psg.png" alt="PSG" height="80" width="80" />
+                        </a>
+                        <div class="data-header__club-info">
+                            <span class="data-header__club" itemprop="affiliation">
+                                <a class="nombre_Club" title="PSG" href="#">PSG</a>
+                            </span><br />
+                            <span class="data-header__league">
+                                <a class="data-header__league-link" href="../listadeclubes.html">
+                                    MadLeague </a>
+                            </span>
+                            <span class="data-header__label">Liga:
+                                <span class="data-header__content">
+                                    Primera División
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="data-header__profile-container">
+                        <div class="modal-trigger" data-custom-open="modal-1" id="fotoauswahlOeffnen"
+                            style="cursor:pointer" onclick="tmEvent('spielerprofil','click','profilbild');">
+
+                            <img src="../img/caras/neymarjr.webp"
+                                title="Neymar Jr." alt="Neymar Jr." class="data-header__profile-image" height="181"
+                                width="139" />
+                        </div>
+                    </div>
+
+                    <div class="data-header__info-box ">
+                        <div class="data-header__details">
+                            <ul class="data-header__items">
+
+                                <li for="" class="data-header__label">
+                                    Nacionalidad:
+                                    <span class="data-header__content">
+                                        <img src="../img/banderas/brasilpequeño.png" title="Brasil"
+                                            alt="Brasil" class="flaggenrahmen flagge" /><span title="Brasil"
+                                            href="">Brasileña</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="row">
+                    <div class="large-12 columns">
+                        <!-- Velocidad -->
+                        <div class="row">
+                            <div class="large-3 columns">
+                                <div class="box">
+                                    <h2 class="content-box-headline"><b>Velocidad</b></h2>
+                                    <div class="erfolg_info_box">
+                                        <table class="auflistung">
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="77">77</td>
+                                                <td><a>Velocidad punta</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="88">88</td>
+                                                <td><a>Aceleración</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Disparo -->
+                            <div class="large-3 columns">
+                                <div class="box">
+                                    <h2 class="content-box-headline"><b>Disparo</b></h2>
+                                    <div class="erfolg_info_box">
+                                        <table class="auflistung">
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="88">88</td>
+                                                <td><a>Precisión tiro</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="85">85</td>
+                                                <td><a>Potencia tiro</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="90">90</td>
+                                                <td><a>Técnica tiro</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="93">93</td>
+                                                <td><a>Eficacia (TL)</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="94">94</td>
+                                                <td><a>Efecto</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pase -->
+                            <div class="large-3 columns">
+                                <div class="box">
+                                    <h2 class="content-box-headline"><b>Pase</b></h2>
+                                    <div class="erfolg_info_box">
+                                        <table class="auflistung">
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="90">90</td>
+                                                <td><a>Precisión de pase corto</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="87">87</td>
+                                                <td><a>Velocidad de pase corto</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="87">87</td>
+                                                <td><a>Precisión de pase largo</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="84">84</td>
+                                                <td><a>Velocidad de pase largo</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Segunda fila -->
+                        <div class="row">
+                            <!-- Regate -->
+                            <div class="large-3 columns">
+                                <div class="box">
+                                    <h2 class="content-box-headline"><b>Regate</b></h2>
+                                    <div class="erfolg_info_box">
+                                        <table class="auflistung">
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="90">90</td>
+                                                <td><a>Agilidad</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="88">88</td>
+                                                <td><a>Capacidad de reacción</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="94">94</td>
+                                                <td><a>Habilidad de regate</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="85">85</td>
+                                                <td><a>Velocidad de regate</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Defensa -->
+                            <div class="large-3 columns">
+                                <div class="box">
+                                    <h2 class="content-box-headline"><b>Defensa</b></h2>
+                                    <div class="erfolg_info_box">
+                                        <table class="auflistung">
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="35">35</td>
+                                                <td><a>Defensa</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="71">71</td>
+                                                <td><a>Cabezazo</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="75">75</td>
+                                                <td><a>Salto</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Físico -->
+                            <div class="large-3 columns">
+                                <div class="box">
+                                    <h2 class="content-box-headline"><b>Físico</b></h2>
+                                    <div class="erfolg_info_box">
+                                        <table class="auflistung">
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="84">84</td>
+                                                <td><a>Corpulencia</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="78">78</td>
+                                                <td><a>Resistencia</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="88">88</td>
+                                                <td><a>Agresividad</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="erfolg_table_saison" data-value="69">69</td>
+                                                <td><a>Fortaleza mental</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    <script defer src="../js/esconderbarra.js"></script>
+    <script defer src="../js/statscolores.js"></script>
+</body>
+
+</html>

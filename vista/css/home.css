@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #cccccc;
+    /* Color de fondo para las barras laterales */
+}
+
+.container {
+    width: 76.5%;
+    /* Ajusta este valor según el porcentaje deseado */
+    margin: 0 auto;
+    background-color: #ffffff;
+    /* Color de fondo del contenido principal */
+}
+
+
+/*Header*/
+
+.tm-header {
+    background-color: #f0ecec;
+    padding: 15px 10px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tm-header__box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.icon-logo {
+    height: 62px;
+    width: 62px;
+    margin-right: 20px;
+}
+
+.tm-header__social-box {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.iniciar_sesion {
+    display: inline-block; /* Asegura que el div se comporte como un botón */
+    background-color: black; /* Fondo negro */
+    border: 2px solid black; /* Borde negro */
+    border-radius: 2px; /* Bordes redondeados */
+    padding: 8px 16px; /* Espaciado reducido para hacer el botón más pequeño */
+    text-align: center; /* Centra el contenido dentro del div */
+  }
+  
+  .iniciar_sesion .header__social-link {
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 16px; /* Tamaño de fuente del texto */
+    display: flex; /* Permite alinear el icono y el texto */
+    align-items: center; /* Alinea el icono verticalmente con el texto */
+    justify-content: center; /* Centra horizontalmente el contenido */
+  }
+  
+  .iniciar_sesion .fa {
+    color: white; /* Icono blanco */
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    font-size: 18px; /* Tamaño del icono */
+  }
+  
+  .iniciar_sesion:hover {
+    background-color: #333; /* Fondo ligeramente más oscuro al pasar el mouse */
+    border-color: #333; /* Borde ligeramente más oscuro al pasar el mouse */
+  }
+  
+  .iniciar_sesion .header__social-link:hover {
+    color: #fff; /* Mantener el texto blanco al pasar el mouse */
+  }
+
+
+
+.header__social-link {
+    margin-left: 10px;
+}
+
+.header__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.tm-header__input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* Añadir esta línea */
+}
+
+.tm-header__form {
+    display: flex;
+}
+
+.tm-header__input--search-field {
+    padding: 20px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.tm-header__input--search-send {
+    background: url('https://tmsi.akamaized.net/icons/search_icon_plus_blue_white.svg') no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+/*Header*/
+
+
+/*Barra de lista*/
+
+.menu-toggle {
+    display: none;
+    /* Oculto por defecto */
+    background: none;
+    border: none;
+    color: #000000;
+    /* Ajustado a blanco para contraste en fondo oscuro */
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Barra de navegación - visible en modo escritorio */
+.main-navbar {
+    display: flex;
+    flex-direction: row;
+    /* Alineación en columnas para modo escritorio */
+    background-color: #000000;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    height: auto;
+}
+
+/* Estilo para mostrar el menú cuando está activo */
+.main-navbar.active {
+    right: 0;
+    /* Esto hace que la barra se desplace hacia el área visible */
+}
+
+
+/* Botón de cerrar dentro del menú móvil */
+.close-menu {
+    display: none;
+    /* Oculto por defecto */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.main-navbar__container {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    /* Coloca elementos en fila en escritorio */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Elementos de la lista del menú */
+.main-navbar__list {
+    margin: 10px 40px;
+    /* Ajuste de espacio horizontal entre elementos en modo escritorio */
+    text-align: center;
+}
+
+
+/* Estilos para los enlaces del menú */
+.main-navbar__list a {
+    text-decoration: none;
+    /* Quita el subrayado de los enlaces */
+}
+
+/* Color de los títulos del menú */
+.main-navbar__list-title {
+    color: #fff;
+}
+
+/*Barra de lista*/
+
+/*Body*/
+
+@media (max-width: 768px) {
+    .main-navbar {
+        display: flex;
+        flex-direction: column;
+        /* Organiza los elementos en columnas */
+        position: fixed;
+        top: 0;
+        right: -250px;
+        height: 100%;
+        width: 250px;
+        background-color: #000000;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Muestra el menú cuando tiene la clase .active */
+    .main-navbar.active {
+        right: 0;
+    }
+
+    .main-navbar__container {
+        flex-direction: column;
+        /* Cambia a columna en modo móvil */
+        align-items: center;
+        /* Centra los elementos en el eje horizontal */
+    }
+
+    /* Opcional: estilo de los elementos del menú en columna */
+    .main-navbar__list {
+        margin: 15px 0;
+        /* Espaciado vertical entre los elementos */
+    }
+
+    /* Botón de cerrar dentro del menú móvil */
+    .close-menu {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    /* Muestra el botón en móvil */
+    .menu-toggle {
+        display: block;
+
+        /* Asegura que esté por encima del menú de navegación */
+    }
+
+        /* Si el menú está abierto, ocultamos el botón */
+        .menu-open .menu-toggle {
+            display: none;
+        }
+
+    .iniciar_sesion .header__social-link {
+        font-size: 0; /* Oculta el texto */
+        display: flex; /* Asegura que se use flexbox en móviles */
+        justify-content: center; /* Centra el icono horizontalmente */
+        align-items: center; /* Centra el icono verticalmente */
+      }
+    
+      .iniciar_sesion .fa {
+        margin-right: 4px; /* Elimina el espacio entre el icono y el texto */
+        font-size: 24px; /* Aumenta el tamaño del icono para que sea más visible */
+      }
+    
+      .iniciar_sesion {
+        padding: 6px 12px; /* Ajuste de padding para hacer el botón más pequeño */
+      }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="icon" type="image/png" href="img/icologotorneo.png">
+    <link rel="stylesheet" href="css/home.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <audio id="background-music">
+
+    </audio>
+    <div class="container">
+        <header class="tm-header">
+            <div class="tm-header__box ">
+                <a href="../../Home.html">
+                    <img class="icon-logo" src="../img/logopagina.png" height="62" width="156" title="Transfermarkt"
+                        alt="Transfermarkt">
+                </a>
+                <tm-domainswitcher open-list="false" tld="es"></tm-domainswitcher>
+                <div class="tm-header__social-box">
+                    <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank"
+                        class="header__social-link" onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+                        <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20"
+                            height="20" class="header__icon">
+                    </a>
+                    <tm-domainswitcher open-list="false" tld="es"></tm-domainswitcher>
+                </div>
+                <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+                    <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="buscadora.html"
+                        method="GET">
+                        <input type="text" name="query" class="tm-header__input--search-field"
+                            placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off"
+                            spellcheck="false" value="" />
+                        <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </header>
+        <nav class="main-navbar navihalter">
+            <ul class="main-navbar__container megamenu_dark_bar megamenu_dark" itemscope="itemscope"
+                itemtype="http://www.schema.org/SiteNavigationElement">
+                <li class="main-navbar__list" data-nav-group="news">
+                    <!-- Cambio aquí: Añadir un enlace a noticias.html -->
+                    <a href="Noticias.html">
+                        <span class="main-navbar__list-title tm-main-nav-el">Noticias</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <!-- Cambio aquí: Añadir un enlace a mercado.html -->
+                    <a href="#">
+                        <span class="main-navbar__list-title tm-main-nav-el"
+                            onClick="tmEvent('Marktwerte','click','menu');">
+                            Hall de la fama
+                        </span>
+                    </a>
+                    <div class="main-navbar__drop-down"></div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="box">
+                    <h2 class="content-box-headline">Resultados de búsqueda de jugador </h2>
+                    <div class="responsive-table">
+                        <div id="yw0" class="grid-view">
+                            <div class="summary"></div>
+                            <table class="items">
+                                <thead>
+                                    <tr>
+                                        <th id="yw0_c0" class="zentriert">Foto</th>
+                                        <th class="zentriert" id="yw0_c0">Nombre</th>
+                                        <th class="zentriert" id="yw0_c1">Puesto</th>
+                                        <th class="zentriert" id="yw0_c2">Club</th>
+                                        <th class="zentriert" id="yw0_c3" onclick="sortTable(4)">Edad</th>
+                                        <th class="zentriert" id="yw0_c4">Nacionalidad</th>
+                                        <th class="rechts" id="yw0_c5" onclick="sortTable(6)">Valor de Mercado</th>
+                                    </tr>
+                                </thead>
+                                <script>
+                                    let sortOrder = true; // true for ascending, false for descending
+
+                                    function sortTable(columnIndex) {
+                                        const table = document.querySelector(".items tbody");
+                                        const rowsArray = Array.from(table.rows);
+
+                                        rowsArray.sort((a, b) => {
+                                            const cellA = a.cells[columnIndex].innerText.replace(/[^0-9,.]/g, "").replace(",", ".");
+                                            const cellB = b.cells[columnIndex].innerText.replace(/[^0-9,.]/g, "").replace(",", ".");
+                                            const valueA = parseFloat(cellA);
+                                            const valueB = parseFloat(cellB);
+
+                                            if (isNaN(valueA) || isNaN(valueB)) {
+                                                // For non-numeric columns (e.g., text), use localeCompare
+                                                return sortOrder ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+                                            }
+                                            return sortOrder ? valueA - valueB : valueB - valueA;
+                                        });
+
+                                        // Re-append sorted rows
+                                        rowsArray.forEach(row => table.appendChild(row));
+                                        sortOrder = !sortOrder; // Toggle sort order
+                                    }
+                                </script>
+
+                                <tbody>
+
+                                    <tr class="odd">
+                                        <!-- Frenkie de Jong -->
+                                        <td title="Mediocentro" class="zentriert rueckennummer bg_Mittelfeld">
+                                            <div class="rn_nummer">MC</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/FrenkieDeJong.webp"
+                                                    title="Frenkie de Jong" alt="Frenkie de Jong"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="Frenkie de Jong" href="#">Frenkie de Jong</a>
+                                        </td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">27</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/Holanda.png"
+                                                title="Paises Bajos" alt="Paises Bajos" class="flaggenrahmen" /><br />
+                                            <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">70,00 mill. €</td>
+                                    </tr>
+
+
+                                    <tr class="odd">
+                                        <td title="Defensa central" class="zentriert rueckennummer bg_Abwehr">
+                                            <div class="rn_nummer">DF</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/AxelDisasi.webp"
+                                                    title="Axel Disasi" alt="Axel Disasi"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <td class="zentriert"><a title="Axel Disasi" href="#">Axel Disasi</a></td>
+                                        <td class="zentriert">26</td>
+                                        <td class="zentriert"><img src="../img/banderas/Francia.png" title="Francia"
+                                                alt="Francia" class="flaggenrahmen" /><br />
+                                        <td class="rechts hauptlink player-value">40,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Jude Bellingham -->
+                                        <td title="Mediocentro ofensivo" class="zentriert rueckennummer bg_Mittelfeld">
+                                            <div class="rn_nummer">MO</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/JudeBellingham.webp"
+                                                    title="Jude Bellingham" alt="Jude Bellingham"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="Jude Bellingham" href="#">Jude Bellingham</a>
+                                        </td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">21</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/Inglaterra.png"
+                                                title="Inglaterra" alt="Inglaterra" class="flaggenrahmen" /><br />
+                                            <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">180,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Diogo Jota -->
+                                        <td title="Extremo izquierdo" class="zentriert rueckennummer bg_Sturm">
+                                            <div class="rn_nummer">EI</div>
+                                        </td>
+                                        <td rowspan=""><a href="#"><img src="../img/caras/DiogoJota.webp"
+                                                    title="Diogo Jota" alt="Diogo Jota"
+                                                    class="bilderrahmen-fixed" /></a></td>
+                                        <!-- Nombre -->
+                                        <td class="zentriert"><a title="Diogo Jota" href="#">Diogo Jota</a></td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">27</td>
+                                        <!-- Pais -->
+                                        <td class="zentriert"><img src="../img/banderas/Portugal.png" title="Portugal"
+                                                alt="Portugal" class="flaggenrahmen" /><br />
+                                            <!-- Precio -->
+                                        <td class="rechts hauptlink player-value">50,00 mill. €</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <button class="prev-page" onclick="prevPage()">Anterior</button>
+                        <span class="page-numbers"></span>
+                        <button class="next-page" onclick="nextPage()">Siguiente</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        </main>
+    </div>
+
+    <div class="audio-controls" id="audio-controls">
+        <div class="music-info"></div>
+        <div class="buttons">
+            <button id="prev-button"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+            <button id="play-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
+            <button id="next-button"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            <button id="volume-button"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+            <input type="range" id="volume-slider" min="0" max="100" step="1">
+            <button id="hide-button"><i class="fa fa-sort-down" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <button id="show-button" style="display:none; position:fixed; bottom:20px; right:20px;"><i class="fa fa-sort-up"
+            aria-hidden="true"></i></button>
+
+
+
+
+
+    <script src="js/audioPlayer.js"></script>
+    <script src="js/currentmusic.js"></script>
+    <script src="js/busqueda.js"></script>
+    <script src="js/pagination.js"></script>
+</body>
+
+</html>

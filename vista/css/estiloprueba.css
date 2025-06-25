@@ -1,0 +1,133 @@
+
+
+/* Estilo para la fila principal */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilo para la columna large-8 */
+.large-12 {
+    flex: 0 0 100%; /* Ocupa el 100% del ancho disponible */
+}
+
+/* Estilo para las columnas dentro de large-8 */
+.large-12 .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilo para las columnas large-3 dentro de large-12 */
+.large-3 {
+    flex: 0 0 31.78%; /* Cada columna ocupa el 31.78% del ancho de large-12 */
+    margin-right: 10px; /* Espaciado entre las columnas */
+    margin-bottom: 10px; /* Espaciado entre las filas */
+}
+
+/* Estilo para las cajas (box) dentro de large-3 */
+.large-3 .box {
+    background-color: var(--tm-white, #ffffff);
+    border: 1px solid var(--tm-grey, #030303);
+    padding: 20px;
+}
+
+.flex-item-right {
+    flex: 1 1 75%; /* Ajusta este valor según lo deseado */
+}
+
+/* Estilo para la imagen del trofeo */
+.erfolg_bild_box {
+    margin-right: 20px; /* Espacio entre la imagen y la tabla */
+}
+
+/* Estilo para la tabla */
+.erfolg_info_box {
+    flex: 1; /* Ocupa todo el espacio restante */
+}
+
+/* Estilos adicionales para la tabla */
+.erfolg_info_box table {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse; /* Colapso de bordes para una apariencia más limpia */
+}
+
+.erfolg_info_box td {
+    border: 1px solid #ddd; /* Borde para las celdas de la tabla */
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: center; /* Alineación centrada del texto en las celdas */
+    text-decoration: none;
+}
+
+.erfolg_info_box td.erfolg_table_saison {
+    font-weight: bold; /* Estilo de fuente negrita para el año de temporada */
+}
+
+.erfolg_info_box td.erfolg_table_wappen img {
+    max-width: 30px; /* Tamaño máximo para los escudos (opcional) */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.content-box-headline {
+    background-color: var(--tm-admiral, #000000);
+    color: var(--tm-white, #fff);
+    display: block;
+    font-family: var(--tm-secondary-font, 'Oswald-VF', 'Oswald-fallback', sans-serif);
+    font-size: var(--tm-secondary-font-size-base, 1rem);
+    font-variation-settings: var(--tm-secondary-font-regular);
+    font-weight: initial;
+    line-height: 1.625rem;
+    margin: 0;
+    padding: 0 .5rem;
+    scroll-margin-top: 5rem;
+    text-transform: uppercase;
+    border: 1px solid var(--tm-grey, #afa9a9);
+}
+
+/* Estilo para el header con la clase data-header */
+.content-box-headline a {
+    align-items: center;
+    color: inherit;
+    display: inline-flex
+}
+
+.content-box-headline--inverted {
+    background-color: var(--tm-white, #fff);
+    color: var(--tm-dark-blue, #1a3151)
+}
+
+.content-box-headline--bottom-bordered {
+    border-bottom: 1px solid var(--tm-light-grey, #e4e4e4)
+}
+
+.content-box-headline--extra-space {
+    padding: 5px
+}
+
+.content-box-headline--logo {
+    align-items: center;
+    display: flex
+}
+
+.content-box-headline--logo img {
+    margin-right: .5rem;
+    max-width: 23px
+}
+
+
+
+.news-archiv__header {
+    margin-bottom: 20px;
+    
+}
+
+.direct-headline__header-box {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+.direct-headline__header {
+    margin: 0;
+    color: #ffffff;
+}
+

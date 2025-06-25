@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clubes</title>
+    <link rel="icon" type="image/png" href="img/icologotorneo.png">
+    <link rel="stylesheet" href="../vista/css/home.css">
+    <link rel="stylesheet" href="../vista/css/listadeclubes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Botón de menú hamburguesa (fuera de la barra) -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="container">
+        <header class="tm-header">
+            <div class="tm-header__box ">
+                <a href="../Home.html">
+                    <img class="icon-logo" src="img/logopagina.png" height="62" width="156" title="Transfermarkt"
+                        alt="Transfermarkt">
+                </a>
+                <tm-domainswitcher open-list="false" tld="es"></tm-domainswitcher>
+                <div class="tm-header__social-box">
+                    <a href="https://www.instagram.com/torneopesof/?hl=es-la" target="_blank"
+                        class="header__social-link" onclick="tmEvent('SM-Icons_Header','click','Instagram');">
+                        <img src="https://tmsi.akamaized.net/icons/socialMedia/instagram_icon_hover.svg" width="20"
+                            height="20" class="header__icon">
+                    </a>
+                    <tm-domainswitcher open-list="false" tld="es"></tm-domainswitcher>
+                </div>
+                <div class="tm-header__input-wrapper" id="schnellsuche-platz">
+                    <form name="schnellsuche" id="schnellsuche" class="tm-header__form" action="buscadora.html"
+                        method="GET">
+                        <input type="text" name="query" class="tm-header__input--search-field"
+                            placeholder="Introducir término (p.ej. jugador, club,...)" autocorrect="off"
+                            spellcheck="false" value="" />
+                        <input type="submit" value="" class="tm-header__input--search-send" alt="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!-- Barra de navegación -->
+        <nav class="main-navbar">
+            <!-- Botón de cerrar dentro de la barra -->
+            <button class="close-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <ul class="main-navbar__container">
+                <li class="main-navbar__list" data-nav-group="news">
+                    <a href='Noticias.html'>
+                        <span class="main-navbar__list-title ">Noticias</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="halldelafama.html">
+                        <span class="main-navbar__list-title ">Hall de la fama</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="valoraciones.html">
+                        <span class="main-navbar__list-title ">Valoraciones</span>
+                    </a>
+                </li>
+                <li class="main-navbar__list" data-nav-group="marktwerte">
+                    <a href="Tienda.html">
+                        <span class="main-navbar__list-title ">Tienda</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <header class="data-header" itemscope itemtype="https://schema.org/Person">
+            <div class="data-header__ribbon">
+            </div>
+            <div class="data-header__headline-container">
+                <h1 class="data-header__headline-wrapper">
+                    <strong>MadLeague</strong>
+                </h1>
+            </div>
+
+
+
+            <div class="data-header__profile-container">
+                <div class="modal-trigger" data-custom-open="modal-1" id="fotoauswahlOeffnen" style="cursor:pointer"
+                    onclick="tmEvent('spielerprofil','click','profilbild');">
+                    <a href="#"><img src="img/logotorneo.jpg" title="MadLeague" alt="MadLeague"
+                            class="bilderrahmen-fixed" height="180" width="140" /></a>
+                </div>
+            </div>
+            <div class="data-header__info-box ">
+                <div class="data-header__details">
+                    <ul class="data-header__items">
+                        <li class="data-header__label">Cantidad de clubes:
+                            <span itemprop="birthDate" class="data-header__content" id="player-count">0</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!-- Valor total de los jugadores -->
+            <div class="data-header__box--small">
+                <a href="#" class="data-header__market-value-wrapper">0,00
+                    <span class="waehrung">mill. €</span>
+                </a>
+            </div>
+
+
+        </header>
+        <div class="row vereinsstartseite">
+            <div class="large-8 columns">
+                <div class="box">
+                    <h2 class="content-box-headline">
+                        Equipos
+                    </h2>
+
+
+                    <div class="responsive-table">
+                        <div id="yw1" class="grid-view">
+                            <div class="summary"></div>
+                            <table class="items">
+                                <thead>
+                                    <tr>
+                                        <th class="zentriert" id="yw1_c0">Club
+                                        </th>
+                                        <th id="yw0_c0" class="zentriert">Cant. jugadores</th>
+                                        <th id="yw0_c0" class="zentriert">Edad Promedio</th>
+                                        <th class="zentriert" id="yw0_c3" onclick="sortTable()">Valor de Mercado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd">
+                                        <!-- Arsenal -->
+                                        <td class="zentriert">
+                                            <img class="zentriert" src="img/logoclubes/arsenal.png" title="Arsenal"
+                                                alt="Arsenal" height="40" width="40" />
+                                            <a href="perfilclub/Arsenal.html">Arsenal</a>
+                                        </td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">26</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25.38</td>
+
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">1179,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Aston
+                                                Villa -->
+                                        <td class=""><a class="" href="perfilclub/AstonVilla.html"><img
+                                                    class="zentriert" src="img/logoclubes/AstonVilla.png"
+                                                    title="AstonVilla" alt="AstonVilla" height="40" width="40" />Aston
+                                                Villa</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">30</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25.87</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">650,50 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- AtleticodeMadrid -->
+                                        <td class=""><a class="" href="perfilclub/AtleticodeMadrid.html"><img
+                                                    class="zentriert" src="img/logoclubes/AtleticodeMadrid.png"
+                                                    title="AtleticodeMadrid" alt="AtleticodeMadrid" height="40"
+                                                    width="40" />Atletico de Madrid</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">29</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">26.14</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">903,70 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Barcelona -->
+                                        <td class="zentriert"><a class="zentriert" href="perfilclub/Barcelona.html"><img
+                                                    src="img/logoclubes/Barcelona.png" title="Barcelona" alt="Barcelona"
+                                                    height="40" width="40" />Barcelona</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">29</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">23.97</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">892,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- bayer leverkusen -->
+                                        <td class="zentriert"><a class="zentriert"
+                                                href="perfilclub/bayerleverkusen.html"><img
+                                                    src="img/logoclubes/bayerleverkusen.png" title="bayerleverkusen"
+                                                    alt="bayerleverkusen" height="40" width="40" />Bayer Leverkusen</a>
+                                        </td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">27</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">24.89</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">670,55 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Bayer Munich -->
+                                        <td class="zentriert"><a class="zentriert"
+                                                href="perfilclub/BayerMunich.html"><img
+                                                    src="img/logoclubes/BayerMunich.png" title="Bayer Munich"
+                                                    alt="Bayer Munich" height="40" width="40" />Bayer Munich</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">33</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25.24</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">1076,35 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- BorussiaDortmund -->
+                                        <td class="zentriert"><a class="zentriert"
+                                                href="perfilclub/BorussiaDortmund.html"><img
+                                                    src="img/logoclubes/BorussiaDortmund.png" title="Borussia Dortmund"
+                                                    alt="Borussia Dortmund" height="40" width="40" />Borussia
+                                                Dortmund</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">27</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25.04</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">479,10 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Chelsea -->
+                                        <td class="zentriert"><a class="zentriert" href="perfilclub/Chelsea.html"><img
+                                                    src="img/logoclubes/Chelsea.png" title="Chelsea" alt="Chelsea"
+                                                    height="40" width="40" />Chelsea</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">41</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">23.00</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">1090,20 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Inter de Milan -->
+                                        <td class="zentriert"><a class="zentriert"
+                                                href="perfilclub/interdemilan.html"><img
+                                                    src="img/logoclubes/interdemilan.png" title="Inter de Milan"
+                                                    alt="Inter de Milan" height="40" width="40" />Inter de Milan</a>
+                                        </td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">30</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">27.93</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">684,55 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Juventus -->
+                                        <td class="zentriert"><a class="zentriert" href="perfilclub/Juventus.html"><img
+                                                    src="img/logoclubes/Juventus.png" title="Juventus" alt="Juventus"
+                                                    height="40" width="40" />Juventus</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">30</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">26.10</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">532,30 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Arsenal -->
+                                        <td class="Leipzig"><a class="zentriert" href="perfilclub/Leipzig.html"><img
+                                                    src="img/logoclubes/RBLeipzig.png" title="Leipzig" alt="Leipzig"
+                                                    height="40" width="40" />Leipzig</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">23</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25.39</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">477,13 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Liverpool -->
+                                        <td class="zentriert"><a class="zentriert" href="perfilclub/Liverpool.html"><img
+                                                    src="img/logoclubes/Liverpool.png" title="Liverpool" alt="Liverpool"
+                                                    height="40" width="40" />Liverpool</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">29</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">24.86</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">948,30 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Manchester City -->
+                                        <td class="zentriert"><a class="zentriert"
+                                                href="perfilclub/manchestercity.html"><img
+                                                    src="img/logoclubes/manchestercity.png" title="Manchester City"
+                                                    alt="Manchester City" height="40" width="40" />Manchester City</a>
+                                        </td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">27</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">26.59</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">1318,20 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Manchester United -->
+                                        <td class="zentriert"><a class="zentriert"
+                                                href="perfilclub/ManchesterUnited.html"><img
+                                                    src="img/logoclubes/ManchesterUnited.png" title="Manchester United"
+                                                    alt="Manchester United" height="40" width="40" />Manchester
+                                                United</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">30</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25.07</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">800,35 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Milan -->
+                                        <td class="zentriert"><a class="zentriert" href="perfilclub/Milan.html"><img
+                                                    src="img/logoclubes/Milan.png" title="Milan" alt="Milan" height="40"
+                                                    width="40" />Milan</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">28</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25.04</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">599,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Arsenal -->
+                                        <td class="Napoles"><a class="zentriert" href="perfilclub/Napoles.html"><img
+                                                    src="img/logoclubes/Napoles.png" title="Napoles" alt="Napoles"
+                                                    height="40" width="40" />Napoles</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">29</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">26.41</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">461,08 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Newcastle -->
+                                        <td class="zentriert"><a class="zentriert" href="perfilclub/Newcastle.html"><img
+                                                    src="img/logoclubes/Newcastle.png" title="Newcastle" alt="Newcastle"
+                                                    height="40" width="40" />Newcastle</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">35</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">26.80</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">659,65 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- PSG -->
+                                        <td class="zentriert"><a class="zentriert" href="perfilclub/PSG.html"><img
+                                                    src="img/logoclubes/PSG.png" title="PSG" alt="PSG" height="40"
+                                                    width="40" />PSG</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">34</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">23.82</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">953,20 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Real Madrid -->
+                                        <td class="zentriert"><a class="zentriert"
+                                                href="perfilclub/RealMadrid.html"><img
+                                                    src="img/logoclubes/RealMadrid.png" title="Real Madrid"
+                                                    alt="Real Madrid" height="40" width="40" />Real Madrid</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">24</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">26.04</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">1352,50mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Arsenal -->
+                                        <td class="zentriert"><a class="zentriert" href="perfilclub/Roma.html"><img
+                                                    src="img/logoclubes/ASRoma.png" title="Roma" alt="Roma" height="40"
+                                                    width="40" />Roma</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">25</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">25.92</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">332,00 mill. €</td>
+                                    </tr>
+
+                                    <tr class="odd">
+                                        <!-- Tottenham -->
+                                        <td class="zentriert"><a class="zentriert" href="perfilclub/Tottenham.html"><img
+                                                    src="img/logoclubes/Tottenham.png" title="Tottenham" alt="Tottenham"
+                                                    height="40" width="40" />Tottenham</a></td>
+                                        <!-- Jugadores -->
+                                        <td class="zentriert">29</td>
+                                        <!-- Edad -->
+                                        <td class="zentriert">24.69</td>
+                                        <!-- Precio -->
+                                        <td class="zentriert hauptlink player-value">806,70 mill. €</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/esconderbarra.js"> </script>
+    <script src="js/conteo.js"> </script>
+
+</body>
+
+</html>
