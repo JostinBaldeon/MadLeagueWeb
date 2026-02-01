@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Si la URL tiene el parámetro "query" (desde home.html), lo usamos para filtrar
+    // Si la URL tiene el parámetro "query" (desde index.html), lo usamos para filtrar
     const urlParams = new URLSearchParams(window.location.search);
     const urlSearchTerm = urlParams.get('query');
     if (urlSearchTerm) {
